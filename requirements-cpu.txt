@@ -1,0 +1,7 @@
+numpy==2.4.6
+Pillow==12.3.0
+PyYAML==6.0.3
+scipy==1.17.1
+scikit-image>=0.25,<1
+trimesh>=4,<5
+pytest>=9,<10

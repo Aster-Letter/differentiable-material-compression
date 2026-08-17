@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "contract_id": "ue-bc-latent-visual-v1",
+  "frozen": true,
+  "task": "tsk:7b6e74",
+  "base_config": "configs/eval/ue_bc_latent_feasibility_v1.json",
+  "base_config_sha256": "e4956df87baf7243ca319434346000165ac625e1473416fc97377201cd615a9e",
+  "content_root": "/Game/CGCompression/BCLatentFeasibilityV1/Maps/Visual",
+  "evidence_root": "outputs/analysis/ue-bc-latent-feasibility-v1",
+  "camera_contract": {
+    "camera_label": "Camera_MaterialLab_Oracle_Fixed",
+    "offset": [452.2026847839356, 758.5334865319824, 132.50294933156258],
+    "look_at": "target_actor_pivot",
+    "field_of_view_degrees": 45.0,
+    "resolution": [1920, 1080]
+  },
+  "variants": [
+    {
+      "id": "lantern_raw_q4_bc7",
+      "source_map": "/Game/CGCompression/PerformanceEvidenceV1/Maps/Single/lantern_raw_q4",
+      "source_actor_label": "PerformanceEvidence_lantern_raw_q4",
+      "rgba8_material": "/Game/CGCompression/C4RenderAblation20k/Materials/MI_Lantern_RAW_Q4",
+      "bc7_material": "/Game/CGCompression/BCLatentFeasibilityV1/Materials/MI_Lantern_RAW_Q4_BC7",
+      "rgba8_map": "/Game/CGCompression/BCLatentFeasibilityV1/Maps/Visual/RGBA8/lantern_raw_q4",
+      "bc7_map": "/Game/CGCompression/BCLatentFeasibilityV1/Maps/Visual/BC7/lantern_raw_q4"
+    },
+    {
+      "id": "lantern_material_render_20k_bc7",
+      "source_map": "/Game/CGCompression/PerformanceEvidenceV1/Maps/Single/lantern_material_render_20k",
+      "source_actor_label": "PerformanceEvidence_lantern_material_render_20k",
+      "rgba8_material": "/Game/CGCompression/C4RenderAblation20k/Materials/MI_Lantern_MATERIAL_RENDER",
+      "bc7_material": "/Game/CGCompression/BCLatentFeasibilityV1/Materials/MI_Lantern_MATERIAL_RENDER_20K_BC7",
+      "rgba8_map": "/Game/CGCompression/BCLatentFeasibilityV1/Maps/Visual/RGBA8/lantern_material_render_20k",
+      "bc7_map": "/Game/CGCompression/BCLatentFeasibilityV1/Maps/Visual/BC7/lantern_material_render_20k"
+    },
+    {
+      "id": "lantern_material_render_160k_bc7",
+      "source_map": "/Game/CGCompression/PerformanceEvidenceV1/Maps/Single/lantern_material_render_160k",
+      "source_actor_label": "PerformanceEvidence_lantern_material_render_160k",
+      "rgba8_material": "/Game/CGCompression/C4LanternRender160k/Materials/MI_Lantern_MATERIAL_RENDER_160K",
+      "bc7_material": "/Game/CGCompression/BCLatentFeasibilityV1/Materials/MI_Lantern_MATERIAL_RENDER_160K_BC7",
+      "rgba8_map": "/Game/CGCompression/BCLatentFeasibilityV1/Maps/Visual/RGBA8/lantern_material_render_160k",
+      "bc7_map": "/Game/CGCompression/BCLatentFeasibilityV1/Maps/Visual/BC7/lantern_material_render_160k"
+    }
+  ]
+}

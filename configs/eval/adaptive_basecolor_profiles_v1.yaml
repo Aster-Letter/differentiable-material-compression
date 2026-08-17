@@ -1,0 +1,31 @@
+schema_version: 1
+experiment: adaptive_basecolor_profiles_v1
+formal_holdout_access: forbidden
+seed: 20260810
+atlas_resolution: [2048, 2048]
+profile:
+  otsu_bins: 2048
+  min_group_size: 4096
+  max_clusters: 12
+  restarts: 8
+  max_iterations: 100
+  relative_tolerance: 1.0e-8
+visibility:
+  helmet: {resolution: [256, 256], min_pixels: 64, min_cameras: 4}
+  simple: {resolution: [128, 128], min_pixels: 32, min_cameras: 2}
+helmet_render_pool: configs/train/scifihelmet_c4_dtf_camera31_v1.yaml
+simple_render_config: configs/train/simple_nonmetal_c4_affine_render_1k_v1.yaml
+assets:
+  - id: scifihelmet
+    kind: helmet
+    gltf: assets/source/glTF-Sample-Assets/Models/SciFiHelmet/glTF/SciFiHelmet.gltf
+  - id: ceramic_vase_01
+    kind: simple
+    gltf: assets/source/simple_nonmetal_polyhaven/CeramicVase01/ceramic_vase_01_2k.gltf
+  - id: avocado
+    kind: simple
+    gltf: assets/source/simple_nonmetal_khronos/Avocado/glTF/Avocado.gltf
+  - id: barramundi_fish
+    kind: simple
+    gltf: assets/source/simple_nonmetal_khronos/BarramundiFish/glTF/BarramundiFish.gltf
+output_root: outputs/adaptive_basecolor_profiles/bf215f-v1

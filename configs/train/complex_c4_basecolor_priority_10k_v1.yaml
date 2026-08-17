@@ -1,0 +1,102 @@
+schema_version: 1
+experiment: complex_c4_basecolor_priority_10k_v1
+formal_holdout_access: forbidden
+seed: 20260811
+assets:
+  - id: BoomBox
+    gltf: assets/source/simple_nonmetal_khronos/BoomBox/glTF/BoomBox.gltf
+    gltf_sha256: b1d2e0e56864c71a4b65fc560bfc1572b1eb32cfb9c8e86d06e6f9ace2803a43
+    metadata: assets/source/simple_nonmetal_khronos/BoomBox/metadata.json
+    metadata_sha256: 764674e303f3bdbe63ebb1304039543d155348efb3c78e9891aedae2eddf0ad9
+    license_spdx: CC0-1.0
+    source_url: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/a02ccb86d94e546a58ebe9e3a825ae93ce509c6f/Models/BoomBox
+    emissive_identity_preserved: true
+    emissive_review:
+      max_rgb_gt_0_05_fraction: 0.004467010498046875
+      conclusion: sparse_accent_only
+  - id: Corset
+    gltf: assets/source/simple_nonmetal_khronos/Corset/glTF/Corset.gltf
+    gltf_sha256: 1aaa7fa54731ca833c3a0f919ba82c1af2a69cc7f8de36ba76bfb5038de8bd38
+    metadata: assets/source/simple_nonmetal_khronos/Corset/metadata.json
+    metadata_sha256: b8373a01d01a52136a0c0830dc0b32954a76b42abd0208bd588ed369e43eb172
+    license_spdx: CC0-1.0
+    source_url: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/2bac6f8c57bf471df0d2a1e8a8ec023c7801dddf/Models/Corset
+    emissive_identity_preserved: null
+  - id: WaterBottle
+    gltf: assets/source/simple_nonmetal_khronos/WaterBottle/glTF/WaterBottle.gltf
+    gltf_sha256: 0596f4e61dc781439d254fdfb5e3462daf1762c18715e3e3ac13001aa8f3f547
+    metadata: assets/source/simple_nonmetal_khronos/WaterBottle/metadata.json
+    metadata_sha256: f73f98b3c27cf83b114240430211b295a8b506aacbd7049999e621878c7352cf
+    license_spdx: CC0-1.0
+    source_url: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/2bac6f8c57bf471df0d2a1e8a8ec023c7801dddf/Models/WaterBottle
+    emissive_identity_preserved: true
+    emissive_review:
+      max_rgb_gt_0_05_fraction: 0.0003345012664794922
+      conclusion: sparse_accent_only
+rig:
+  id: generic_c4_rig_v1
+  resolution: [256, 256]
+  vertical_fov_degrees: 38.0
+  distance_padding: 1.18
+  minimum_roughness: 0.045
+  display_exposure: 1.5
+  linear_psnr_data_range: 2.0
+  backface_culling: true
+training:
+  steps: 10000
+  checkpoint_steps: [1000, 5000, 10000]
+  log_interval: 100
+  metric_interval: 500
+  material_batch_size: 8192
+  latent_learning_rate: 0.0002
+  affine_learning_rate: 0.00002
+  compander_learning_rate: 0.0002
+loss:
+  render_linear: 1.0
+  render_log: 0.25
+  normal_cosine: 0.25
+  roughness_l1: 0.5
+  metallic_l1: 0.5
+  charbonnier_epsilon: 0.001
+postprocess:
+  scalar_saturate: true
+  normal_disk_projection: true
+  normal_z_reconstruction: true
+  straight_through_backward: true
+  compander_gain_min: 0.5
+  compander_gain_max: 2.0
+  analytic_instruction_budget: 80
+audit:
+  batches: 8
+  output_root: outputs/remote/c4-basecolor-priority/complex-gradient-audit
+candidates:
+  N0-control:
+    objective_id: r0_control
+    target_share: 0.0
+    compander: false
+    output_root: outputs/remote/c4-basecolor-priority/complex-n0-control
+  BC80:
+    objective_id: basecolor_priority
+    target_share: 0.8
+    compander: false
+    output_root: outputs/remote/c4-basecolor-priority/complex-bc80
+  BC90:
+    objective_id: basecolor_priority
+    target_share: 0.9
+    compander: false
+    output_root: outputs/remote/c4-basecolor-priority/complex-bc90
+  BC80-compander:
+    objective_id: basecolor_priority_compander
+    target_share: 0.8
+    compander: true
+    output_root: outputs/remote/c4-basecolor-priority/complex-bc80-compander
+  BC90-compander:
+    objective_id: basecolor_priority_compander
+    target_share: 0.9
+    compander: true
+    output_root: outputs/remote/c4-basecolor-priority/complex-bc90-compander
+audit_pairs:
+  - [0, 0]
+  - [8, 3]
+  - [12, 4]
+  - [26, 5]

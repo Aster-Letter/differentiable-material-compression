@@ -1,0 +1,14 @@
+schema_version: 1
+inputs:
+  core4_dir: assets/processed/SciFiHelmet/core4
+  core4_manifest: configs/assets/scifihelmet_core4.yaml
+output_dir: outputs/compression/scifihelmet/hybrid_interpolation_v1/phase0
+initialization:
+  split_seed: 20260803
+  tile_size: 64
+  inverse_postprocess_epsilon: 0.0001
+  ranks: [2, 3]
+expected:
+  atlas_hw: [2048, 2048]
+  c1: {logical_channels: 5, raw_bytes: 20971520, parameters: 60, weight_bytes: 240, macs: 48}
+  c2: {logical_channels: 6, raw_bytes: 25165824, parameters: 68, weight_bytes: 272, macs: 56}

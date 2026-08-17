@@ -1,0 +1,17 @@
+schema_version: 1
+experiment: scifihelmet_c4_basecolor_dynamic_constraint_10k_v1
+formal_holdout_access: forbidden
+base_config: configs/train/scifihelmet_c4_basecolor_priority_10k_v1.yaml
+base_config_sha256: 9710d44e809cffdf88df76602b253bd427836dd2cdf5e5f252b393f1fa8dc44e
+candidate_id: BC-dynamic
+objective_id: dynamic_rgb_chroma_constraint
+training:
+  steps: 10000
+  checkpoint_steps: [1000, 5000, 10000]
+constraints:
+  rgb_rmse_ceiling: 0.012
+  chroma_retention_floor: 0.20
+  penalty_rho: 0.25
+  dual_learning_rate: 0.05
+  multiplier_max: 100.0
+output_root: outputs/scifihelmet_c4_basecolor_priority/5ee339-bc-dynamic-10k-r1

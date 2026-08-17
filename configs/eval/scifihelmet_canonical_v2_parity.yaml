@@ -1,0 +1,30 @@
+schema_version: 1
+inputs:
+  gltf: assets/source/glTF-Sample-Assets/Models/SciFiHelmet/glTF/SciFiHelmet.gltf
+  core4_manifest: configs/assets/scifihelmet_core4.yaml
+  latent_hard_png: outputs/compression/scifihelmet/render_quant/baseline/models/tiny_mlp/latent_pre_qat_rgba_unorm8.png
+  decoder_npz: outputs/compression/scifihelmet/material_fit/tiny_mlp/decoder_weights.npz
+frozen_sha256:
+  latent_hard_png: 5a1781afc1a877be452a87a3d958e48cab921b45237faebf2be3668a60ae5fdc
+  decoder_npz: d676ade8294600eb0064a835eabfe86d4d35e39ee787d512574fbef8d7346baa
+render:
+  resolution: [256, 256]
+  camera_radius: 4.5
+  target: [0.0, 0.0, 0.0]
+  up: [0.0, 1.0, 0.0]
+  vertical_fov_degrees: 45.0
+  near: 0.1
+  far: 10.0
+  minimum_roughness: 0.045
+  display_exposure: 1.5
+analysis:
+  seed: 20260804
+  case_count: 3
+  gradient_probe_count: 32
+train_cameras:
+  - {name: parity_e0_y000, elevation_degrees: 0.0, yaw_degrees: 0.0}
+  - {name: parity_ep20_y090, elevation_degrees: 20.0, yaw_degrees: 90.0}
+  - {name: parity_em15_y225, elevation_degrees: -15.0, yaw_degrees: 225.0}
+train_lights:
+  - {name: front_right, position: [2.5, 3.0, 4.0], color: [1.0, 0.98, 0.95], radiant_intensity: 90.0, ambient_intensity: 0.04}
+output_dir: outputs/compression/scifihelmet/deployment_parity_arc_v1/phase0_renderer_parity

@@ -1,0 +1,5 @@
+extends: configs/train/scifihelmet_filter_aware.yaml
+candidate: f_sigmoid
+training:
+  warmup_steps: 1000
+output_dir: outputs/compression/scifihelmet/filter_aware_decoder_v1/f_sigmoid

@@ -1,0 +1,1917 @@
+{
+  "schema_version": 1,
+  "release": "v0.1.0",
+  "files": 382,
+  "entries": [
+    {
+      "path": ".gitattributes",
+      "bytes": 238,
+      "sha256": "c85aee2e293deb655303af2636e6f47fcc406fdd3f10c085655ab3a3fefa6da6"
+    },
+    {
+      "path": ".github/workflows/cpu-ci.yml",
+      "bytes": 848,
+      "sha256": "1864375f3b75992cd964c581ea40a454d321f4710bd3087d4eb944a1cb3698e2"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 1976,
+      "sha256": "b5f175c7f0edb55a7ea706011dcb7216412e47a89c772827c8ea12d8f4ca70e1"
+    },
+    {
+      "path": "CONTEXT.md",
+      "bytes": 7745,
+      "sha256": "c159a7d95bb6146981dd5af2dacd8c96e3c86b3a1f2e0e4c6e4f274786bd717c"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1069,
+      "sha256": "7e137b5a206bedd76c246a5b6dff22728d2735cf13f412696156cd0a7601f977"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4263,
+      "sha256": "4b2ac0a0d38427eb3245a16e002fc80f4efbbb1c9d22a7456d04146ca05d3576"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1562,
+      "sha256": "72df6d0ee7182e02f365db3823e94647506cf64cdc9f276871a09938f89399db"
+    },
+    {
+      "path": "assets/README.md",
+      "bytes": 1522,
+      "sha256": "6020cf5607356203be50b0561b3c373c623e08867cc6f87de24f739fe06dc591"
+    },
+    {
+      "path": "configs/README.md",
+      "bytes": 1105,
+      "sha256": "9deffee263105695e504221ed1f8e39263203e287b5de3f18114b77ce5bc347b"
+    },
+    {
+      "path": "configs/assets/scifihelmet_core4.yaml",
+      "bytes": 6215,
+      "sha256": "e598dc14e24691a5f5b81d5240aa7d327615410a8aad1cd47439f93c471481e2"
+    },
+    {
+      "path": "configs/eval/adaptive_basecolor_profiles_v1.yaml",
+      "bytes": 1123,
+      "sha256": "f1bae4a4039af7a036236c636105be1409a37a27d2b75b82879305085d97de93"
+    },
+    {
+      "path": "configs/eval/complex_c4_asset_screen_v1.yaml",
+      "bytes": 2511,
+      "sha256": "af3b3836b22be957aac5875962ef0272fc5cedaa4cc896e2a8ce8a7aa6ecce3d"
+    },
+    {
+      "path": "configs/eval/scifihelmet_c4_affine_raw_pca_preview_v1.yaml",
+      "bytes": 1559,
+      "sha256": "a20c94e8cc333da8dc0b12b913c5c0c046c56263a84a5d5524c3033a9ef58322"
+    },
+    {
+      "path": "configs/eval/scifihelmet_c4_affine_visual_summary_v1.yaml",
+      "bytes": 3306,
+      "sha256": "9a3630084bc86152b444c13e199069547dd2587459fb29c5f657b31fdd6ecf6c"
+    },
+    {
+      "path": "configs/eval/scifihelmet_canonical_v2_parity.yaml",
+      "bytes": 1293,
+      "sha256": "0379a5223699f10bea8e8cb8a57510403e5f0ffd4998d0c4566e9c0dbe48d4b6"
+    },
+    {
+      "path": "configs/eval/scifihelmet_deployment_parity_phase3.yaml",
+      "bytes": 1592,
+      "sha256": "f80612b8a2cdbd8dd13f2daffc148993738d1e8e3b3637d39de853ffe27e8d56"
+    },
+    {
+      "path": "configs/eval/scifihelmet_filter_aware_phase0.yaml",
+      "bytes": 1430,
+      "sha256": "7b5000fa62fa640fe6129fecde900f9e087d1d3828c1f75e94134c2d8be7f958"
+    },
+    {
+      "path": "configs/eval/scifihelmet_filter_aware_phase3_template.yaml",
+      "bytes": 1595,
+      "sha256": "c32858e6996b7f9f8887c754b978729bb9378db43938281480cb2ef18a8683d4"
+    },
+    {
+      "path": "configs/eval/scifihelmet_hybrid_c1.yaml",
+      "bytes": 1495,
+      "sha256": "6460cef295b336ee0a988bf620cff94d4422dc90a1b8ab8a1873a4d05d85685d"
+    },
+    {
+      "path": "configs/eval/scifihelmet_hybrid_direct_scalars.yaml",
+      "bytes": 1488,
+      "sha256": "76c82817a97b2d300cb9472978ef27ece638ef7ac92af28e24449330ed5a8759"
+    },
+    {
+      "path": "configs/eval/scifihelmet_hybrid_factorization_phase0.yaml",
+      "bytes": 1658,
+      "sha256": "4d0b6b74b1fa5220291c33477c5dfc17b1153bab25e2a10573694cf3f927755c"
+    },
+    {
+      "path": "configs/eval/scifihelmet_hybrid_phase0.yaml",
+      "bytes": 537,
+      "sha256": "916b323f400d69e374ac34aecf0ecc8a6d983312920e86a205087c0e4832bea0"
+    },
+    {
+      "path": "configs/eval/scifihelmet_hybrid_phase0_c1.yaml",
+      "bytes": 1531,
+      "sha256": "f224a8258e7f020c18e3197cab93f971a8c0c535dede3474b457126d1a19dda5"
+    },
+    {
+      "path": "configs/eval/scifihelmet_hybrid_phase0_c2.yaml",
+      "bytes": 1539,
+      "sha256": "c44b6c359d71ee39d30c175bb4ef1918c3cccdff5f3e9095254a8195f55aa836"
+    },
+    {
+      "path": "configs/eval/scifihelmet_interpolation_repair.yaml",
+      "bytes": 1146,
+      "sha256": "3973229865bf2996750f9987652ceaf2353a52f151b9f1123b4a4bf5669e3d92"
+    },
+    {
+      "path": "configs/eval/scifihelmet_interpolation_repair_s1.yaml",
+      "bytes": 1138,
+      "sha256": "5d14887ce76e0a3ec10f3d8e45944b8785885d5edb2876174ed5e8446ca0cc77"
+    },
+    {
+      "path": "configs/eval/scifihelmet_interpolation_repair_s2.yaml",
+      "bytes": 1138,
+      "sha256": "a5a85e33d23b564a287c298271dc56cd9bdec63c07f85ee26fd50d2dd19c98ec"
+    },
+    {
+      "path": "configs/eval/simple_nonmetal_c4_pca_v1.yaml",
+      "bytes": 1085,
+      "sha256": "a634e80dda1689b4e4b62603d0e96e6127e8f59c70e9bc109f4b5dcdbebe910e"
+    },
+    {
+      "path": "configs/eval/ue_bc_latent_feasibility_v1.json",
+      "bytes": 4171,
+      "sha256": "e4956df87baf7243ca319434346000165ac625e1473416fc97377201cd615a9e"
+    },
+    {
+      "path": "configs/eval/ue_bc_latent_visual_v1.json",
+      "bytes": 2640,
+      "sha256": "d7ca91b31bc9d66899e8abfd709bbef7a5252ca165ee8f3f3c99afc92f998071"
+    },
+    {
+      "path": "configs/render/scifihelmet_gbuffer.yaml",
+      "bytes": 593,
+      "sha256": "af696082b9c71f297998d38e5ed37e284dcbf23e36611e9e2da213819178fba6"
+    },
+    {
+      "path": "configs/render/scifihelmet_reference.yaml",
+      "bytes": 1268,
+      "sha256": "431d125168e7ee0220e0cb2328371ce9db28336ab34092ec68a260fc524f99a5"
+    },
+    {
+      "path": "configs/train/barramundi_c4_render_appearance_5k_v1.yaml",
+      "bytes": 1656,
+      "sha256": "fedbc515c2f3bf68fa5f1b4289a08472077b4e80b9fba69b5b877b9ec23a796a"
+    },
+    {
+      "path": "configs/train/barramundi_c4_render_random_5k_v1.yaml",
+      "bytes": 1879,
+      "sha256": "f63ed6407f2db2c935cbbcc4490608817331a8ccf35714252f57343a31088938"
+    },
+    {
+      "path": "configs/train/barramundi_c4_render_random_80k_v1.yaml",
+      "bytes": 1880,
+      "sha256": "162a0d698fce5b946b707acb20ad44f18581ae8c372ef9b92d72565331a57e69"
+    },
+    {
+      "path": "configs/train/c4_render_ablation_20k_v1.yaml",
+      "bytes": 2574,
+      "sha256": "b6bd5e66f67fe2ec34988e55b3eb86db276473e57f8be34823c9ab1c114d0cac"
+    },
+    {
+      "path": "configs/train/c4_render_ablation_lantern_40k_v1.yaml",
+      "bytes": 1778,
+      "sha256": "b43bcb1cba526e1eebe57d4497511b0dfb2589db514d8ad772de89491dadc535"
+    },
+    {
+      "path": "configs/train/c4_render_ablation_lantern_render_160k_v1.yaml",
+      "bytes": 2080,
+      "sha256": "3cd66e7234e90f914599df3323cb1ae437076212ba160f95c66a912337194691"
+    },
+    {
+      "path": "configs/train/complex_c4_basecolor_priority_10k_v1.yaml",
+      "bytes": 3739,
+      "sha256": "929681fbc8f118f55ea167bc55bd9d880d4b3fec93ff9ce2d35bdcb510b19697"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_affine_chroma8_l0_40k.yaml",
+      "bytes": 1045,
+      "sha256": "c614bad21a0edc20991eeb6c13348d9e8d989a4bdce6653d2a54e2400046b106"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_affine_chroma8_l0_camera31_light6_80k.yaml",
+      "bytes": 1372,
+      "sha256": "62043f496ba8ff7d9aea5a104de2c81298b6f389eefa88837bc8d99a4332b5c4"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_affine_chroma8_l0_lightrel_40k.yaml",
+      "bytes": 3069,
+      "sha256": "2493f18d359d9f30880fd038684297bbb72fa5021913267de00517722bbd053a"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_affine_chroma8_l0_lightrel_5k.yaml",
+      "bytes": 2744,
+      "sha256": "f00338a0ab2d929c94c488ccedef572ebf8b4e15037de586121fe9cf8997f1f0"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_affine_color_guard_audit_v1.yaml",
+      "bytes": 1503,
+      "sha256": "b01f4657baf99be0a9fc61e1a4fa2ca95e9b0cf6dee845efb5264484c542e81a"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_affine_color_guard_dual_ratio_1k_v1.yaml",
+      "bytes": 1372,
+      "sha256": "c9c504b892fd2f407904b21b407666c522c5cec8b6596a101f45fc3aedda201d"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_affine_color_risk_1k_v1.yaml",
+      "bytes": 2175,
+      "sha256": "79d8e43328fb090bc2cc130ca660556e3fe59a4d7ddd89c9b3cc1252b76e7fbb"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_affine_raw_pca_orthogonal_10k_v1.yaml",
+      "bytes": 2607,
+      "sha256": "05cfd79d32b99db3dc39fde4aa906bf1023328c3610b34ff50ff901240c4f3c8"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_affine_raw_pca_render_10k_v1.yaml",
+      "bytes": 1629,
+      "sha256": "e4988d9ede51a93079e50b2ea4c2009d05ed745453a490f731a0082f4c5f35f3"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_affine_v1_40k.yaml",
+      "bytes": 715,
+      "sha256": "d1a6fe12c535ebcd16267f98afb43983bf81da31d1cc939f2df9d57b8b1506e2"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_affine_v1_l0_80k.yaml",
+      "bytes": 974,
+      "sha256": "3a90eb8a092405275773639fb0a12c957660ddb89d6ad0f248defa1b986ddfed"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_affine_v1_preflight.yaml",
+      "bytes": 1672,
+      "sha256": "01f3fe6f468173e8512819ed5dd4f18ddc11830a2762daa79303f1ef87897508"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_basecolor_dynamic_constraint_10k_v1.yaml",
+      "bytes": 627,
+      "sha256": "0cc2e08177d4a02fb1dace559b9c75f4bb01d7e1fdb6f85b1087a068d845e157"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_basecolor_only_oracle_10k_v1.yaml",
+      "bytes": 1946,
+      "sha256": "011e42c7d98318321dc6722baaf25fdd95a00e811e2da64e8850d7b3e13e32a2"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_basecolor_priority_10k_v1.yaml",
+      "bytes": 2584,
+      "sha256": "9710d44e809cffdf88df76602b253bd427836dd2cdf5e5f252b393f1fa8dc44e"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_dtf_camera31_v1.yaml",
+      "bytes": 7609,
+      "sha256": "c330055a478534040dc7eb60a13e51ba9f5d1e4d5a3614378150b25f3315c712"
+    },
+    {
+      "path": "configs/train/scifihelmet_c4_dtf_v1.yaml",
+      "bytes": 5918,
+      "sha256": "54b18372bff19c2ec09f1ee29bab18d39cf580d0b75bbc0a986202edeaa0e0d3"
+    },
+    {
+      "path": "configs/train/scifihelmet_deployment_parity_arc_v1.yaml",
+      "bytes": 4219,
+      "sha256": "9ae7b1bd9c9e29ce8672bc92d531546a83b23e81ec0e016c35cff55b206160da"
+    },
+    {
+      "path": "configs/train/scifihelmet_exact_basecolor_v1.yaml",
+      "bytes": 1153,
+      "sha256": "fd60ac0c08bde75c18c2d81f94c4dd7fbdfe3565a15c14d4007e4453846bcee5"
+    },
+    {
+      "path": "configs/train/scifihelmet_filter_aware.yaml",
+      "bytes": 3903,
+      "sha256": "63d95c5fac2add56bb24e69836ac6fc1ccb03275f43386ee3c1f58b0da9ad61f"
+    },
+    {
+      "path": "configs/train/scifihelmet_filter_aware_sigmoid.yaml",
+      "bytes": 183,
+      "sha256": "278d94c8b45c677749a526fb897668c398615719c0a6e7521da345b6fe7f9d22"
+    },
+    {
+      "path": "configs/train/scifihelmet_filter_aware_softplus.yaml",
+      "bytes": 185,
+      "sha256": "682fab39c6b353be880c9da9b7cc9adc5fdf1991d804fa76b23048b1477c435b"
+    },
+    {
+      "path": "configs/train/scifihelmet_hybrid_c1.yaml",
+      "bytes": 4281,
+      "sha256": "c31499a2946a7e0b9a46de57128d32b7336af989e269c958b8abc0594c6b9f14"
+    },
+    {
+      "path": "configs/train/scifihelmet_hybrid_c2.yaml",
+      "bytes": 827,
+      "sha256": "e5821b139721b38b3bd14d8d4af0a3a6d33e311d2346f3dd22e2d13caec545b5"
+    },
+    {
+      "path": "configs/train/scifihelmet_hybrid_factorization.yaml",
+      "bytes": 554,
+      "sha256": "1a0b19d7ac78210f328adfd8e2d436e94af1a1da2f033338b5baaf5010348df9"
+    },
+    {
+      "path": "configs/train/scifihelmet_hybrid_factorization_rerun.yaml",
+      "bytes": 560,
+      "sha256": "304291714fdf040dccc4f6101e42f70c7233e3a1e4f1099174ca729c5cde2d52"
+    },
+    {
+      "path": "configs/train/scifihelmet_interpolation_repair.yaml",
+      "bytes": 3575,
+      "sha256": "b9b8d60fca14b91d0d6ef1d771a97833ae57159f2c55a13bd572a0dd4b82f2e1"
+    },
+    {
+      "path": "configs/train/scifihelmet_interpolation_repair_s2.yaml",
+      "bytes": 194,
+      "sha256": "7c814bb2ebb22368f2f04d649b18e15cc6551bd6f2ae18da7f56e6c61bd18e6b"
+    },
+    {
+      "path": "configs/train/scifihelmet_material.yaml",
+      "bytes": 641,
+      "sha256": "a4adc66d69a09c9fb71be329a4a7bf91c58256d4239c337154e1ef0882f11c47"
+    },
+    {
+      "path": "configs/train/scifihelmet_monotone_basecolor_v1.yaml",
+      "bytes": 1830,
+      "sha256": "d96ee610c9e01518fe9af57aa23c8a54c79a92e13b83d5ebb09d34560976f184"
+    },
+    {
+      "path": "configs/train/scifihelmet_repair.yaml",
+      "bytes": 3053,
+      "sha256": "4318f8e8312dbd92152222f8f906fad060ef416da5a2061caf562e43e11c9753"
+    },
+    {
+      "path": "configs/train/simple_nonmetal_c4_affine_render_1k_v1.yaml",
+      "bytes": 1614,
+      "sha256": "c802cc8805cba02812ed312f7495fc5abfc6fc732e59806fefcaf9dd0ebf4254"
+    },
+    {
+      "path": "docs/ASSET_CONVENTIONS.md",
+      "bytes": 10068,
+      "sha256": "b713d60f08d0f251f9d61dcee201aca207b83c3beabd50849808bf60ed9b7e50"
+    },
+    {
+      "path": "docs/C4_AFFINE_EXPERIMENT_PLAN.md",
+      "bytes": 28751,
+      "sha256": "ebaf7a5b1bd14497c2af90dbc78f2c271ab5529f468351c327038674c752dd0e"
+    },
+    {
+      "path": "docs/C4_AFFINE_VISUAL_INVENTORY_20260809.md",
+      "bytes": 7434,
+      "sha256": "c3768dbdf1fa8069c325d2554e0d9d526695f4b128a7f0f6286a3fe80deffdd0"
+    },
+    {
+      "path": "docs/PROJECT_HISTORY_20260815.md",
+      "bytes": 7275,
+      "sha256": "cb9afb2946bf6cbfa706be94b695aeb82f15d7be196e03c5e1875d3c760c43ca"
+    },
+    {
+      "path": "docs/PUBLIC_REPOSITORY.md",
+      "bytes": 1491,
+      "sha256": "1567dc6c25602554519bdbbadbc77f3341181c9e76b64855a0ef339768bffbcd"
+    },
+    {
+      "path": "docs/RESEARCH_PLAN.md",
+      "bytes": 1964,
+      "sha256": "6aee2b4d50049bf6e14bc9a6b3d31c3a3d4ce237f40bece89bd97b17127b586f"
+    },
+    {
+      "path": "docs/RESULTS.md",
+      "bytes": 3059,
+      "sha256": "12a939abaddc20fd5eca8733dc8a6fb3376ab49cc59fb8618ee45bd3c058fe67"
+    },
+    {
+      "path": "docs/SCOW_C4_BASECOLOR_PRIORITY_HANDOFF_20260811.md",
+      "bytes": 5772,
+      "sha256": "2fed77b4a834d293a2c7085dc174570e1a189b15dba42800d2a158924d22ce73"
+    },
+    {
+      "path": "docs/SCOW_C4_RENDER_ABLATION_20K_GUIDE.md",
+      "bytes": 4789,
+      "sha256": "437d22069e5760fe8de0ef6261e3681166b4d23009fa4d84eba3135144d22e99"
+    },
+    {
+      "path": "docs/SCOW_C4_RENDER_ABLATION_LANTERN_40K_GUIDE.md",
+      "bytes": 4228,
+      "sha256": "2408044c1036cd13d4da5ea93a0d8b7b6833fbc2ce7f1bea3b2eb979ad45c987"
+    },
+    {
+      "path": "docs/SCOW_C4_RENDER_ABLATION_LANTERN_RENDER_160K_GUIDE.md",
+      "bytes": 2208,
+      "sha256": "9c27c6bbb1df1d1ac78302941909ba6439e2dc8fccff51a0215e771e5f334712"
+    },
+    {
+      "path": "docs/SETUP_WINDOWS.md",
+      "bytes": 5655,
+      "sha256": "d078119dd7d66993a8b68b80363690419d53d0b72dc9858dacb81279ac0e9a6a"
+    },
+    {
+      "path": "docs/SIMPLE_NONMETAL_ASSET_CANDIDATES_20260809.md",
+      "bytes": 5647,
+      "sha256": "6573c449fbde26c81555783a7847154f2706b75b614f173a2d86c867fc6214d1"
+    },
+    {
+      "path": "docs/adr/0001-r0b-hybrid-direct-scalars-recommended-deployment.md",
+      "bytes": 4143,
+      "sha256": "f7df4c2e9a13cdf640769fdb3e7a426f90470c53cb281c760d08e6acb09ca439"
+    },
+    {
+      "path": "docs/adr/0002-deployment-parity-activation-region.md",
+      "bytes": 3975,
+      "sha256": "6060ba479314edfb1130eaa537830f7e91ad825d427a18c15c081fabd2e32931"
+    },
+    {
+      "path": "docs/adr/0003-decode-then-filter-quality-first.md",
+      "bytes": 6126,
+      "sha256": "a9263543439d751f2537a1d9275ba5778440c9031fce35b417b105a8bea1791e"
+    },
+    {
+      "path": "docs/adr/0004-c4-single-affine-mainline.md",
+      "bytes": 7414,
+      "sha256": "9ea71f2b896ae49d08c76a9d05517f55494fa96cb6a54c57ad8e202983a8c3e4"
+    },
+    {
+      "path": "docs/experiments/SCIFIHELMET_EXACT_BASECOLOR_V1.md",
+      "bytes": 6050,
+      "sha256": "e64ca3b4740861a6e1189c71fc9ca0e23bee002437ca2f9eab7055c7931ab2b7"
+    },
+    {
+      "path": "docs/experiments/SCIFIHELMET_MONOTONE_BASECOLOR_V1.md",
+      "bytes": 3022,
+      "sha256": "f8546318b297fc0e3093619bd30c3e3139c339f687b7fb6bbacd52b99442412b"
+    },
+    {
+      "path": "docs/references/nvlabs-integration.md",
+      "bytes": 1702,
+      "sha256": "72fc3640d2886b2c74ac327fa223636e0a9190cdfd736869dcc64ec925ae02a5"
+    },
+    {
+      "path": "environment.yml",
+      "bytes": 213,
+      "sha256": "a42b5a267e971da51c9a9138e4b5256d6af7261ec72fea044fc48343610c393a"
+    },
+    {
+      "path": "experiments/README.md",
+      "bytes": 235,
+      "sha256": "36cd1b32dda4683f4792f7e0d77483a00e922fbf632d543df95c8c160530678a"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1075,
+      "sha256": "a1bd7ab394aecc5e82b0815cabd3eb5c6d6aa99c54b9d55ee5141a7b6ab9dd66"
+    },
+    {
+      "path": "requirements-cpu.txt",
+      "bytes": 106,
+      "sha256": "96b1e7aa5b8e7784c2da589498fd1e52feb8c1677a11babd72a51a2a926144ea"
+    },
+    {
+      "path": "requirements-gpu.txt",
+      "bytes": 321,
+      "sha256": "d8cefa53f9257bbe3648bc91248ccb0c12e3ae09959efc9df174719bf94d172b"
+    },
+    {
+      "path": "scripts/README.md",
+      "bytes": 2125,
+      "sha256": "c117deee188c9830e438739c60af8f38626957c9a555b0689b46ebdd43e83ce7"
+    },
+    {
+      "path": "scripts/analyze_c4_render_ablation_20k_results.py",
+      "bytes": 40143,
+      "sha256": "99b3645f7cc2b9206d1c59d6e1f8f7e7eb24021a7e7c489102e5d969f861a84c"
+    },
+    {
+      "path": "scripts/analyze_c4_render_ablation_lantern_40k_results.py",
+      "bytes": 33956,
+      "sha256": "7af44241c663719e25967da32aada6623797bf1587cef640dbbf123b640b3354"
+    },
+    {
+      "path": "scripts/analyze_c4_render_ablation_lantern_render_160k_results.py",
+      "bytes": 31498,
+      "sha256": "366e317777113b10d559e402ed44fcedbb08052f3baca04fc78f961a11c17465"
+    },
+    {
+      "path": "scripts/analyze_scifihelmet_artifacts.py",
+      "bytes": 12585,
+      "sha256": "db959a2fea527f188e8bbdc56bd824aec28316766b3a92f10e6e9e6e0385312f"
+    },
+    {
+      "path": "scripts/analyze_scifihelmet_deployment_parity.py",
+      "bytes": 6793,
+      "sha256": "24932663c15ee87a5e86f801b29a1fa1ffe80da830e0fd4aae839b2c36ef7717"
+    },
+    {
+      "path": "scripts/analyze_scifihelmet_filter_aware.py",
+      "bytes": 19113,
+      "sha256": "b347e3672adac674106b39e296b1d5bcdc99fc942931b7d5aa3a4998611135de"
+    },
+    {
+      "path": "scripts/analyze_scifihelmet_filter_aware_candidates.py",
+      "bytes": 9013,
+      "sha256": "61b52e0658607d5c0e8ebb63a1b55160330755553776e534a157176dc0747d4b"
+    },
+    {
+      "path": "scripts/analyze_scifihelmet_interpolation.py",
+      "bytes": 43992,
+      "sha256": "3e5ade18303e38d92844ecb6b2b62711e671cf5fddc3f825d4c564716115f0e3"
+    },
+    {
+      "path": "scripts/analyze_scifihelmet_o2_r050_continuation.py",
+      "bytes": 6349,
+      "sha256": "6bfb907909f5ed6cddb8a0f2a9c4017fd42b1decbfe32e213f5d7878cd69c290"
+    },
+    {
+      "path": "scripts/analyze_scifihelmet_render_matrix.py",
+      "bytes": 10411,
+      "sha256": "cbb8fca8ef09bc0bc08d23f28d8e119f2468ce487c5afd2459b96aa95d5fcc16"
+    },
+    {
+      "path": "scripts/analyze_scifihelmet_ue_hybrid_r0b.py",
+      "bytes": 8688,
+      "sha256": "e3c724e8ae54810f831203f476518d0a34f379b7a73d15778254edaa5115e522"
+    },
+    {
+      "path": "scripts/analyze_ue_bc_latent_visual_v1.py",
+      "bytes": 8519,
+      "sha256": "a37986cdd3f9733212bf80c945f725c0b485bc31ab5285e80db2698c4325efe7"
+    },
+    {
+      "path": "scripts/audit_adaptive_basecolor_profiles.py",
+      "bytes": 11055,
+      "sha256": "30810961122135df1d7d1dfdbd2014dbfd84ae65ad92f15f0e5bdd5469c2a8b2"
+    },
+    {
+      "path": "scripts/audit_complex_c4_assets.py",
+      "bytes": 20674,
+      "sha256": "a9ebb5c87e6c8aa9f149b56bd2abd6552056af0071cd332195bc2323e9b63f30"
+    },
+    {
+      "path": "scripts/audit_public_repo.py",
+      "bytes": 3676,
+      "sha256": "4aad403338198480843b2027951bcb8520a3764133ae80536e243894551a7898"
+    },
+    {
+      "path": "scripts/audit_render_simple_nonmetal_c4_pca.py",
+      "bytes": 17910,
+      "sha256": "aa8017e249f768c29a56f05074856e9e96c1e724676bb530d1ac9a33393cbc62"
+    },
+    {
+      "path": "scripts/audit_scifihelmet_affine_lightrel.py",
+      "bytes": 8979,
+      "sha256": "7b3f0c4db9d3f8c2cece0a8cb4f1db901efa6198363af7c6c4187254a7443e9f"
+    },
+    {
+      "path": "scripts/audit_scifihelmet_affine_render_sampling.py",
+      "bytes": 24019,
+      "sha256": "01f43a96c39963ef2a909a02279051f484990e96d9e47c3b4c0805cabc15b5b0"
+    },
+    {
+      "path": "scripts/audit_scifihelmet_c4_affine_color_guard.py",
+      "bytes": 22265,
+      "sha256": "f99cc4cf48c46cc9ba368a0092e539d10916f6d6e33705e9af354c7617b48e39"
+    },
+    {
+      "path": "scripts/audit_scifihelmet_c4_affine_pca.py",
+      "bytes": 10064,
+      "sha256": "3e8b84688e23b3846dc6df4130b53439e1fdd580f4a7f572547ad3e86b4d5d6e"
+    },
+    {
+      "path": "scripts/build_c4_lantern_40k_report_artifact.py",
+      "bytes": 17929,
+      "sha256": "1ad946edf62012a40aa7b88add0b2f164137db9a889a1314b72d63286a33e114"
+    },
+    {
+      "path": "scripts/build_c4_render_ablation_bundle.py",
+      "bytes": 4848,
+      "sha256": "46ac89031fbbdfcec0168d272cdb18c7a7d2eb54e0c03da8762e2d99a27621dd"
+    },
+    {
+      "path": "scripts/build_c4_render_ablation_lantern_40k_bundle.py",
+      "bytes": 2390,
+      "sha256": "b27cf9d49ae2e681630e47e2dcb7f0263323e51feb2ac900972b35358f97d20e"
+    },
+    {
+      "path": "scripts/build_c4_render_ablation_lantern_render_160k_bundle.py",
+      "bytes": 1957,
+      "sha256": "5a8ee20e79febcce9dbde4458c0fef93652fcb7a35772efb6c99fa2c279b3aba"
+    },
+    {
+      "path": "scripts/build_public_release_snapshot.py",
+      "bytes": 7200,
+      "sha256": "9872d72a407521b10095b4e9063a6796fea5f212087aecfe24504d5726790df8"
+    },
+    {
+      "path": "scripts/check_environment.ps1",
+      "bytes": 2657,
+      "sha256": "5aa523fbbcde416c114055c422ab962b41c16e3c03dd2758be5b7d4e888c8566"
+    },
+    {
+      "path": "scripts/check_ue_project.ps1",
+      "bytes": 4528,
+      "sha256": "d74691a106acf8897ee37be03200243a11576bf9175d8985262a45d8f5504ac9"
+    },
+    {
+      "path": "scripts/compose_c4_lantern_40k_preview.py",
+      "bytes": 6906,
+      "sha256": "94a15c1fc7ae1d4779a35ed622a7e1d4577ba9e6211043bc776105246826f850"
+    },
+    {
+      "path": "scripts/continue_c4_render_ablation_lantern_40k.py",
+      "bytes": 24947,
+      "sha256": "b7f7c16d8c601979a82a8810ca9db9aabbf4e8e9807fe2047cda2cda9d3b6c86"
+    },
+    {
+      "path": "scripts/continue_c4_render_ablation_lantern_render_160k.py",
+      "bytes": 21931,
+      "sha256": "c394da15b239983ace3d0d864ce831648344a8014ef83284913fefd33a48e381"
+    },
+    {
+      "path": "scripts/decide_scifihelmet_c4_dtf_capacity.py",
+      "bytes": 1832,
+      "sha256": "ab5e29f50c2c510c8e848f342d11c809f2fa7f9f80d3940a17f5dc32a174bf90"
+    },
+    {
+      "path": "scripts/decide_scifihelmet_c4_dtf_capacity_route.py",
+      "bytes": 1910,
+      "sha256": "c82e830a8d58a445f824df814790abe0c46b92f25cb50d7ff06df694469c3724"
+    },
+    {
+      "path": "scripts/diagnose_scifihelmet_c4_affine_color_guard_1k.py",
+      "bytes": 23289,
+      "sha256": "6386da8b3fb44cfb7ee898be1536432e7bb36a724eedf34228e4c16f0c16b43c"
+    },
+    {
+      "path": "scripts/evaluate_scifihelmet_decode_then_filter_oracle.py",
+      "bytes": 5080,
+      "sha256": "47ea84ad48e4c019ab4649df2866e6cc4919a994af2cd0c1e553ccf91c08dde9"
+    },
+    {
+      "path": "scripts/evaluate_scifihelmet_deployment_parity_gates.py",
+      "bytes": 11309,
+      "sha256": "850319b610c465d9fd4db02ce90407677097653f804da1f62aa505f3391d8009"
+    },
+    {
+      "path": "scripts/evaluate_scifihelmet_deployment_parity_quality.py",
+      "bytes": 6852,
+      "sha256": "845a83e253acbac3ad5274c6658687ef0095da6b026f3f6d60ff7544acc25eb5"
+    },
+    {
+      "path": "scripts/evaluate_scifihelmet_filter_aware_gates.py",
+      "bytes": 9949,
+      "sha256": "cc7e45d8bb9f823fc53930eb5ddc7d28014a27bb3e5b9df896c6b6e74251d8d4"
+    },
+    {
+      "path": "scripts/evaluate_scifihelmet_hybrid_direct_scalars.py",
+      "bytes": 19442,
+      "sha256": "994cd5737a52b623c9b4564de58fc5d84f876cf1b1d7c1964fad7c47a53fe44b"
+    },
+    {
+      "path": "scripts/evaluate_scifihelmet_hybrid_factorization_phase0.py",
+      "bytes": 6342,
+      "sha256": "4baf45558a2e38c2313249d37e3016ba42a370f5140e0bcdc5711759046ad4bf"
+    },
+    {
+      "path": "scripts/evaluate_scifihelmet_hybrid_phase0.py",
+      "bytes": 4484,
+      "sha256": "adc9f4747b45847d37e760f13699b06c74dc5fadf40b10a0e41ba3c21873a6a1"
+    },
+    {
+      "path": "scripts/evaluate_scifihelmet_interpolation_gates.py",
+      "bytes": 6629,
+      "sha256": "f677d765d148b9a12419ef1d0a13f4fd58fa67db11226c96577ba654d886774c"
+    },
+    {
+      "path": "scripts/export_all_ue_gpu_events_v1.ps1",
+      "bytes": 3042,
+      "sha256": "f8b84842af2f1f1aacff2739fabd868c12eb8d833945d78522469446584f0d4d"
+    },
+    {
+      "path": "scripts/export_c4_lantern_render_160k_ue_preview.py",
+      "bytes": 6167,
+      "sha256": "55bc7f32278b019552478527def49f5ced6c4d18638fe0ce9da08fc115111a1f"
+    },
+    {
+      "path": "scripts/export_c4_render_ablation_ue_preview.py",
+      "bytes": 11183,
+      "sha256": "9a039bc70b40179953e26c384b50df6edd41ca794a8b1813b76920b635a6f1b1"
+    },
+    {
+      "path": "scripts/export_scifihelmet_c4_affine_pca_repair.py",
+      "bytes": 6510,
+      "sha256": "75e18ba2a8e7221239e6486c70850555e66edac0c72361f1826b8ae9143174da"
+    },
+    {
+      "path": "scripts/export_scifihelmet_exact_basecolor_ue.py",
+      "bytes": 338,
+      "sha256": "09955d175a8a66dc2ec92cb8297b5df5731756bd308c6982ebb787ed4f84d702"
+    },
+    {
+      "path": "scripts/export_scifihelmet_ue_arc_preview.py",
+      "bytes": 6634,
+      "sha256": "2a5b9e85ba455fc291d499b383b6ced09f515d8edc2f17c6fd2411329f64b5da"
+    },
+    {
+      "path": "scripts/export_scifihelmet_ue_decoder.py",
+      "bytes": 372,
+      "sha256": "e3b83e0705736a7dd8a85b86324dfa9f3055bd4affb4e88376364c9b395db542"
+    },
+    {
+      "path": "scripts/export_scifihelmet_ue_dtf_preview.py",
+      "bytes": 1355,
+      "sha256": "75165b1749d306ea21dfd4f3c0258c38a3c2acc88dffbe5a5b3bbb33eeccdf0e"
+    },
+    {
+      "path": "scripts/export_scifihelmet_ue_hybrid_direct_scalars.py",
+      "bytes": 381,
+      "sha256": "9317481bb189390ad01922736452e6f1283a532b580d50c9bde2938ff9a115fd"
+    },
+    {
+      "path": "scripts/export_ue_bc_latent_gpu_events_v1.ps1",
+      "bytes": 2647,
+      "sha256": "d214261026e2d20d9b32c461343993500637757ff97bb8acff8ea9f877f3c628"
+    },
+    {
+      "path": "scripts/export_ue_insights_trace_v1.cmd",
+      "bytes": 1235,
+      "sha256": "922d9a6eea707a4f6a5110bec1dfc603a07d1ed8cda14b72181c37338f4185a6"
+    },
+    {
+      "path": "scripts/fetch_scifihelmet.ps1",
+      "bytes": 965,
+      "sha256": "a798e859ea4f41c3b737dfe02f095f403354c885bc1f770685848ad96604f77c"
+    },
+    {
+      "path": "scripts/finalize_scifihelmet_deployment_parity_partial.py",
+      "bytes": 3880,
+      "sha256": "320128b00d410ab53054365db018c70a638fb602b4d4041f1241f426bff03146"
+    },
+    {
+      "path": "scripts/finalize_scifihelmet_filter_aware.py",
+      "bytes": 5790,
+      "sha256": "60b972c2b286303757bdc3e99af6c2d74f0c28f03cee6acd4eed7a91f18378b3"
+    },
+    {
+      "path": "scripts/finalize_scifihelmet_hybrid.py",
+      "bytes": 5776,
+      "sha256": "b0b472a64e4876f9e64c4fcfecde05c5dc62f32c2f7a3729ef7516612ff02bfb"
+    },
+    {
+      "path": "scripts/finalize_scifihelmet_hybrid_direct_scalars.py",
+      "bytes": 5718,
+      "sha256": "a4765fdf12461f56320239002fda7efb0ef93bb2faaf9a67f5c9096ac9259381"
+    },
+    {
+      "path": "scripts/finalize_scifihelmet_hybrid_factorization.py",
+      "bytes": 8430,
+      "sha256": "ce96c08118c7930bc1c758498262dccc7b46812091f37be3bfb90fd9df04a233"
+    },
+    {
+      "path": "scripts/finalize_scifihelmet_hybrid_factorization_rerun.py",
+      "bytes": 8949,
+      "sha256": "4b4a7ecf6cd020eaf3d2bce7c10994cbf45fd90c2220dc74cea69c7d4b1cbf39"
+    },
+    {
+      "path": "scripts/finalize_ue_bc_latent_feasibility_v1.py",
+      "bytes": 9365,
+      "sha256": "70fa111a0419d150ed32e61f2af77932a98532c72b837efd7ac54076533b4d6f"
+    },
+    {
+      "path": "scripts/finalize_ue_bc_latent_timing_v1.py",
+      "bytes": 10480,
+      "sha256": "a09af804f7e478641546294dbee9b7dc439161d2481e8470e8bc272b1c7454da"
+    },
+    {
+      "path": "scripts/finalize_ue_runtime_evidence_v1.py",
+      "bytes": 28502,
+      "sha256": "0530fa76065fe40d079b210b459a231d35fdd622ca987355a499e65592e96968"
+    },
+    {
+      "path": "scripts/initialize_scifihelmet_hybrid.py",
+      "bytes": 8233,
+      "sha256": "c01a60a4250ff5fd2382dace152e9394784bdecf555d25b6afceef3e78e985b9"
+    },
+    {
+      "path": "scripts/initialize_scifihelmet_hybrid_factorization.py",
+      "bytes": 13597,
+      "sha256": "35a876561866a179b6ae3a9228ac2b8cac6e7859078c622ac24591595afd944f"
+    },
+    {
+      "path": "scripts/prepare_lantern_c4_asset.py",
+      "bytes": 1551,
+      "sha256": "ad984962f28d3226d369b0f23a9157f5bfcf9a084352af12107029d8d6ec7c7b"
+    },
+    {
+      "path": "scripts/preprocess_scifihelmet.py",
+      "bytes": 1726,
+      "sha256": "60ef473e6720e93a317c5a5ad31bfb62775ff07741ac9bed46c83c63cb3a365b"
+    },
+    {
+      "path": "scripts/remote_run_barramundi_random_preflight.sh",
+      "bytes": 2027,
+      "sha256": "cb514cb5ba267ecd77aad26ec37c51b8b170a84636040cbdf1e576ff33589a20"
+    },
+    {
+      "path": "scripts/remote_run_c4_basecolor_priority.sh",
+      "bytes": 5874,
+      "sha256": "00865e82d166df0e64cd99b06d99c83306bf6817a3ffaca04e24b82fb0d44b4c"
+    },
+    {
+      "path": "scripts/remote_run_c4_render_ablation_20k.sh",
+      "bytes": 6033,
+      "sha256": "475eb7bb35f0fef412566df578a0da8fabab92ae0e31a7ed3d48ed7f8d7e8ff2"
+    },
+    {
+      "path": "scripts/remote_run_c4_render_ablation_lantern_40k.sh",
+      "bytes": 4445,
+      "sha256": "05f0ca7297587208865e5c8e7de855b77ee6ab0a1f6f8a09e4345dc172f535e6"
+    },
+    {
+      "path": "scripts/remote_run_c4_render_ablation_lantern_render_160k.sh",
+      "bytes": 4878,
+      "sha256": "f316618f4f617ac05e205638b621e94571b99dd2c215e3ea759b25e83839b137"
+    },
+    {
+      "path": "scripts/remote_setup_cg_frontier.sh",
+      "bytes": 755,
+      "sha256": "f4ac6e439c958f3efaa536fc7d97b8c1d28352b737cc0693a844cb4baae2fc92"
+    },
+    {
+      "path": "scripts/render_c4_render_ablation_summary.py",
+      "bytes": 12716,
+      "sha256": "0322d6ffc322c248839ef4c8dac4b69a1922e912775df975f41853d272434b5e"
+    },
+    {
+      "path": "scripts/render_complex_c4_basecolor_priority_summary.py",
+      "bytes": 11452,
+      "sha256": "2e8afa910fbe899676bab00732231a39fc5f71820deae47e6bfb7f2c7af47d9a"
+    },
+    {
+      "path": "scripts/render_scifihelmet_c4_affine_color_risk_1k.py",
+      "bytes": 17513,
+      "sha256": "cfbb54a9ce902e5aff03d5ac32087a1bf1509231368140c4fb9e6a45db0ee092"
+    },
+    {
+      "path": "scripts/render_scifihelmet_c4_affine_raw_pca.py",
+      "bytes": 18254,
+      "sha256": "f978fdd9b29457fbc3b82cea757c114f0ee990d77aee5f3280d35d5d80c6787b"
+    },
+    {
+      "path": "scripts/render_scifihelmet_c4_affine_visual_summary.py",
+      "bytes": 23630,
+      "sha256": "ceab9060ce32373f706bdaba13135024861a71bbd08805e892758a1bd22abaf9"
+    },
+    {
+      "path": "scripts/render_scifihelmet_c4_basecolor_priority_summary.py",
+      "bytes": 15592,
+      "sha256": "c1510d7a77efd22b5fa710d314cc13648e0ceb7a31c74c47437470e9534f1881"
+    },
+    {
+      "path": "scripts/render_scifihelmet_gbuffer.py",
+      "bytes": 5174,
+      "sha256": "0ac931fcdf128ac7bd897fd1a9df3756db3dcac0b33a57adc2b2bd06f707477c"
+    },
+    {
+      "path": "scripts/render_scifihelmet_raw_pca_orthogonal_summary.py",
+      "bytes": 8036,
+      "sha256": "fb16c246b22a0a045f6f692208e28b303bd81dbf6e480dd68220f318d2e07c3c"
+    },
+    {
+      "path": "scripts/render_scifihelmet_reference.py",
+      "bytes": 8530,
+      "sha256": "b1b9ee30033e3840106917a0c93fd178e66a104c458c350deca9e57dd49ffd7c"
+    },
+    {
+      "path": "scripts/report_scifihelmet_raw_pca_orthogonal_pareto.py",
+      "bytes": 8462,
+      "sha256": "8a106c49128930176a7cfc2cbe081ac85f1be362d675dba74575049af05b3e53"
+    },
+    {
+      "path": "scripts/run_scifihelmet_c4_affine_40k.py",
+      "bytes": 26078,
+      "sha256": "24d4b84621604fb87f774929b98035d9c46695c1247bb237ea5b028868738221"
+    },
+    {
+      "path": "scripts/run_scifihelmet_c4_affine_chroma8_l0_40k.py",
+      "bytes": 33829,
+      "sha256": "ba959bbd6ed387ae8e4b838cad34a408aac4414e92bc7b7ffb7c23e8b1784fae"
+    },
+    {
+      "path": "scripts/run_scifihelmet_c4_affine_chroma8_l0_lightrel.py",
+      "bytes": 41725,
+      "sha256": "b4db159a086ea584fed90a63a0082289df07290ae8d8bb1d632c8e1a2b4b86b3"
+    },
+    {
+      "path": "scripts/run_scifihelmet_c4_affine_color_guard_1k.py",
+      "bytes": 47178,
+      "sha256": "39b9321088bf528de50af88a78450e9a3f064d9a01c9650626f8dde1ddeeeb55"
+    },
+    {
+      "path": "scripts/run_scifihelmet_c4_affine_color_risk_1k.py",
+      "bytes": 52814,
+      "sha256": "5589f0f91729903a3e2c934854da72f601dd9fb8599391f2c716c38a66f82370"
+    },
+    {
+      "path": "scripts/run_scifihelmet_c4_affine_l0_80k.py",
+      "bytes": 22094,
+      "sha256": "7219cb3ed026cd6ba16a1dac3e5946c64de162ec89c8bca28d5fedd285cf5b16"
+    },
+    {
+      "path": "scripts/run_scifihelmet_c4_affine_preflight.py",
+      "bytes": 32579,
+      "sha256": "bc013b28789bbb2e93a77f404d418a4b07c55df8acfda7746d49dc59e4425f69"
+    },
+    {
+      "path": "scripts/run_scifihelmet_exact_basecolor.py",
+      "bytes": 39606,
+      "sha256": "8b00b4494a17f785120a92e6b0c95234400c33bf887f05d5d8bcac575a1f7c83"
+    },
+    {
+      "path": "scripts/run_scifihelmet_monotone_basecolor.py",
+      "bytes": 38055,
+      "sha256": "2d3ff80e1d20fd55831f79d2b188e43a330a7545635f62a0f69844b4ed4216d2"
+    },
+    {
+      "path": "scripts/run_scifihelmet_raw_pca_orthogonal_matrix.py",
+      "bytes": 5040,
+      "sha256": "b5048bd5fbc4096124534658b30a6238e773bc4e7f56d4ef64e0826ee366973f"
+    },
+    {
+      "path": "scripts/run_ue_bc_latent_feasibility_v1.ps1",
+      "bytes": 11205,
+      "sha256": "a3555a97d5d88bf487ccdd43534abc5eaf323dfa9459f716fbec05a890b5b8dc"
+    },
+    {
+      "path": "scripts/run_ue_bc_latent_timing_v1.ps1",
+      "bytes": 5825,
+      "sha256": "597b60c45f49cde90fc60fdaad4bec6f64ba6301eb6f81e5bcd56ec3f0595b0b"
+    },
+    {
+      "path": "scripts/run_ue_gpu_timing_v1.ps1",
+      "bytes": 6763,
+      "sha256": "72c7bdf419d438e17b9d5b0625429680d412ea93a8a01b4e0a694b45353b4f93"
+    },
+    {
+      "path": "scripts/scow_barramundi_random_1k.slurm",
+      "bytes": 2055,
+      "sha256": "ea69dcdc1c25aa41a8f8e3ed389a069059ea090745d194a2cafe49c3021e0901"
+    },
+    {
+      "path": "scripts/scow_barramundi_random_5k.slurm",
+      "bytes": 2055,
+      "sha256": "5843ecfc968e5b3a9c46522e3f7a82acdd33b930a11ba8549bdacf2279fa21fd"
+    },
+    {
+      "path": "scripts/scow_barramundi_random_80k.slurm",
+      "bytes": 2304,
+      "sha256": "55b66af8c18c516960dc9b40f41e38ad09d335aabf6cf13ff1b8257c5af57baa"
+    },
+    {
+      "path": "scripts/scow_barramundi_random_preflight.slurm",
+      "bytes": 1066,
+      "sha256": "c1de82a850e8d8d8b52fdd02d7e055f41d18683c091853c1f15e56e2e48db8f1"
+    },
+    {
+      "path": "scripts/scow_c4_basecolor_priority_job.slurm",
+      "bytes": 469,
+      "sha256": "26273d294ca4d7a3d06236e473ea2a0dd6a9edde9cb1d42993a2f1057657b36e"
+    },
+    {
+      "path": "scripts/scow_c4_basecolor_priority_preflight.slurm",
+      "bytes": 520,
+      "sha256": "fa76836a66bf7e1cff3152dc20b31cb0c1aa196d76b83ef921ee674c0285d2a6"
+    },
+    {
+      "path": "scripts/scow_c4_render_ablation_20k_job.slurm",
+      "bytes": 494,
+      "sha256": "4a8d06b93784491a01f499dcfa7554ae0c2993b53fce00d5ef161560f3190b34"
+    },
+    {
+      "path": "scripts/scow_c4_render_ablation_20k_preflight.slurm",
+      "bytes": 464,
+      "sha256": "64a6c7bd6cff8d54aaa9f808c6215ac20fdf668734c95dd4148d0b66d40c1ce5"
+    },
+    {
+      "path": "scripts/scow_c4_render_ablation_lantern_40k_job.slurm",
+      "bytes": 514,
+      "sha256": "3364d0e3a15f52e61f51f0ec5b01b032fc30432c84a281ea079000f24fd9bbad"
+    },
+    {
+      "path": "scripts/scow_c4_render_ablation_lantern_40k_preflight.slurm",
+      "bytes": 488,
+      "sha256": "cbc87a37530da2ac7a4fd746ea90cd710841b1282aaf6d47fa7c7f6310d79f78"
+    },
+    {
+      "path": "scripts/scow_c4_render_ablation_lantern_render_160k_job.slurm",
+      "bytes": 547,
+      "sha256": "4b62b1d1c4d6819c3f0a18c41273bf5dda4ab27175f4205f7a2b322dfd4ae401"
+    },
+    {
+      "path": "scripts/scow_c4_render_ablation_lantern_render_160k_preflight.slurm",
+      "bytes": 513,
+      "sha256": "ba7ce1b3e54e3dc038d7a00c856527434b0ec4f4cc3f075cf0b8833e3b5bf928"
+    },
+    {
+      "path": "scripts/scow_submit_c4_basecolor_priority.sh",
+      "bytes": 781,
+      "sha256": "c370ae5cac6b2dd1164a50c2915c3fce576a9276c2f201deb0e3195dad912c85"
+    },
+    {
+      "path": "scripts/scow_submit_c4_render_ablation_20k.sh",
+      "bytes": 3141,
+      "sha256": "db32be5afeb3a0f190f020220ae4776874d7cdb007b3bd21d17cf3c46a85cd1e"
+    },
+    {
+      "path": "scripts/scow_submit_c4_render_ablation_lantern_40k.sh",
+      "bytes": 2064,
+      "sha256": "5b4418a2fc0904a460f0284e1589bdb641d63f8ea00dd89fdc90e96f22d928bf"
+    },
+    {
+      "path": "scripts/scow_submit_c4_render_ablation_lantern_render_160k.sh",
+      "bytes": 2397,
+      "sha256": "fd9413392e091ae6f422ba763ac872f9fe7f03b94adaacab22d7ffc2165bd625"
+    },
+    {
+      "path": "scripts/select_scifihelmet_c4_dtf_activation.py",
+      "bytes": 3021,
+      "sha256": "556e5d7117cd77176498952208af3dc4af18ebff03c97cdaad42da629de7df9c"
+    },
+    {
+      "path": "scripts/train_barramundi_c4_render_appearance_5k.py",
+      "bytes": 33645,
+      "sha256": "9acadc9ffd82c5b5c43274258f4d2c74dc379e4d2b55166631c2d0af6af064cd"
+    },
+    {
+      "path": "scripts/train_c4_render_ablation_20k.py",
+      "bytes": 38319,
+      "sha256": "f10433113768aedba0d622dfafeb6f9221d3ec0deed61025ffd3b8e6c2412a1f"
+    },
+    {
+      "path": "scripts/train_complex_c4_basecolor_priority_10k.py",
+      "bytes": 9428,
+      "sha256": "953003a4ca7d8ee625992ed6c677daeb95532436ce19e8449a528eb19dee3645"
+    },
+    {
+      "path": "scripts/train_scifihelmet_c4_affine_raw_pca_orthogonal_10k.py",
+      "bytes": 35707,
+      "sha256": "0794496d24a817bbf98f34aaa6dde260cee6fe44cbef5cfe6833a0355c974193"
+    },
+    {
+      "path": "scripts/train_scifihelmet_c4_affine_raw_pca_render_10k.py",
+      "bytes": 20738,
+      "sha256": "bec203d4c08bcb85f0aa2b41a65cc1e91d405bb32acbb241a16eea54c8c896f0"
+    },
+    {
+      "path": "scripts/train_scifihelmet_c4_basecolor_dynamic_constraint_10k.py",
+      "bytes": 14987,
+      "sha256": "995ec52022ed674cd7c2cc0916b857927089a9a33a2522aeda8b13efbf5c2d88"
+    },
+    {
+      "path": "scripts/train_scifihelmet_c4_basecolor_priority_10k.py",
+      "bytes": 50867,
+      "sha256": "294c087730944a3058bbb70e288fe461c7dc65ce454c5f38a0a20ddee34fb56b"
+    },
+    {
+      "path": "scripts/train_scifihelmet_c4_dtf_full.py",
+      "bytes": 52054,
+      "sha256": "be9b89f6559a33e5ee42aa20baa2f624dadacf22329687e77f16f74c1db2c362"
+    },
+    {
+      "path": "scripts/train_scifihelmet_c4_dtf_precheck.py",
+      "bytes": 22290,
+      "sha256": "b46f4c6715246b3d8870fe7d60a2d3b855ab7892bc6a7a60aa0c3f8f81e9a8e5"
+    },
+    {
+      "path": "scripts/train_scifihelmet_deployment_parity.py",
+      "bytes": 27609,
+      "sha256": "599f18c4669927952709f1c6bda7ecec456d59a722a6927a48fa0e3d05ed3052"
+    },
+    {
+      "path": "scripts/train_scifihelmet_filter_aware.py",
+      "bytes": 25943,
+      "sha256": "74b5eb7fad496a0c39bee6707087ee620bbf8eed7bdacfcbed6a1bdc6d9bef12"
+    },
+    {
+      "path": "scripts/train_scifihelmet_hybrid.py",
+      "bytes": 21675,
+      "sha256": "165e5f91af89c9dc39caae61afb2a895790dcc63431847c390bb965834604889"
+    },
+    {
+      "path": "scripts/train_scifihelmet_hybrid_factorization.py",
+      "bytes": 21258,
+      "sha256": "449d87247b60dfe097bf3c6cbd297c4596c33e4a5adb4461e7f8f19eff70c020"
+    },
+    {
+      "path": "scripts/train_scifihelmet_interpolation_repair.py",
+      "bytes": 23653,
+      "sha256": "92ea9e3d16787121b948cf195d3b2d094749d8abbfd125ae2dcae31db7a68be9"
+    },
+    {
+      "path": "scripts/train_scifihelmet_material.py",
+      "bytes": 2979,
+      "sha256": "fa272ac1f0a73bcb0646dd419e19614654cf49b97fc2afe7bb13022e644c954b"
+    },
+    {
+      "path": "scripts/train_scifihelmet_repair.py",
+      "bytes": 25034,
+      "sha256": "f54278c371d3e6234d034b8731b52b92e76e0d9aaca9f86dd730fb23bd30c9ce"
+    },
+    {
+      "path": "scripts/train_simple_nonmetal_c4_affine_render.py",
+      "bytes": 26287,
+      "sha256": "6eb35c5ab752c049d65094da24fea76fbf1e95cf1d72342498da5f57cfdb243b"
+    },
+    {
+      "path": "scripts/validate_c4_render_ablation_ue_preview.py",
+      "bytes": 2309,
+      "sha256": "7f201a6c6be4e6a0dbbc9e07e22f8a437935a4525b52820589dff8ce2224d124"
+    },
+    {
+      "path": "scripts/validate_scifihelmet_ue_affine_readbacks.py",
+      "bytes": 2494,
+      "sha256": "45257046846ee50c4ae49fbdec6e38ec64769ff3c1e12d2a8db892284f23bf56"
+    },
+    {
+      "path": "scripts/verify_c4_render_ablation_bundle.py",
+      "bytes": 5088,
+      "sha256": "0cbc625424ad25da7ed6105a98df201ef693b6e83fce59fcf17a384a0a230f18"
+    },
+    {
+      "path": "scripts/verify_c4_render_ablation_lantern_40k_bundle.py",
+      "bytes": 4569,
+      "sha256": "53b12b5f55e891da3ea2af90c452bba6a75f28eabf909ebcc4a371b4df838b2a"
+    },
+    {
+      "path": "scripts/verify_c4_render_ablation_lantern_40k_run.py",
+      "bytes": 7866,
+      "sha256": "a51dc93ebb543550eb9534ddc1078453941cb32c22ee6a28ebca37d317575705"
+    },
+    {
+      "path": "scripts/verify_c4_render_ablation_lantern_render_160k_bundle.py",
+      "bytes": 3974,
+      "sha256": "5684362345d5f9e53e50a4a18a2ad470e5ef1879b0a17468371e7dd30d57fa2d"
+    },
+    {
+      "path": "scripts/verify_c4_render_ablation_lantern_render_160k_run.py",
+      "bytes": 8337,
+      "sha256": "51a6b3e46c2a9f80daa4c637baae822c63ed58a788509c61c8fe9ee672d12229"
+    },
+    {
+      "path": "scripts/verify_c4_render_ablation_run.py",
+      "bytes": 7580,
+      "sha256": "7b95379b1c0229b0519c9c4bb500c2edda17336f4c9b5f318d2f8b571543496d"
+    },
+    {
+      "path": "scripts/verify_scifihelmet_canonical_v2.py",
+      "bytes": 9369,
+      "sha256": "05d6c3c76f429ced46bfebfdec0d057fc786c52d8a3eeac1e7d4afa3687d8517"
+    },
+    {
+      "path": "scripts/verify_scifihelmet_exact_basecolor_export.py",
+      "bytes": 739,
+      "sha256": "6bcbce0034a5206b404f43d4632531b024bedea201f75c16d90b125b50fcacdc"
+    },
+    {
+      "path": "src/README.md",
+      "bytes": 922,
+      "sha256": "e18fe6c6c59d3b25327a78a41a80537786d49878cadccffd234fbf3b69d7b0a7"
+    },
+    {
+      "path": "src/cg_frontier/__init__.py",
+      "bytes": 44,
+      "sha256": "c8f17d627ccee89e14dd1ca92570d1e2c759d2e1037ddc7c002af5a80140644f"
+    },
+    {
+      "path": "src/cg_frontier/assets/__init__.py",
+      "bytes": 515,
+      "sha256": "1cab82b74751bd339e920f2a82a37cfc55e72ad2b855524751c12724eed80064"
+    },
+    {
+      "path": "src/cg_frontier/assets/complex_c4_validation.py",
+      "bytes": 5767,
+      "sha256": "676382da83a3a4e77d82630e7b117ad158afc5a8b440595a522b36ab78e7468b"
+    },
+    {
+      "path": "src/cg_frontier/assets/gltf_core4.py",
+      "bytes": 10366,
+      "sha256": "44a4cb48422744d5123d234e6671802f4579b3bc09eb46ad0b1ce28638b41c75"
+    },
+    {
+      "path": "src/cg_frontier/assets/gltf_merge.py",
+      "bytes": 12084,
+      "sha256": "6f727a9f74f0bef4df1e1d06ed115fcf57b9cd5602ee746b0d67fcbf9f6dc722"
+    },
+    {
+      "path": "src/cg_frontier/assets/gltf_mesh.py",
+      "bytes": 21879,
+      "sha256": "a6255097d56fdf634ec2ec2545dcce24c4a82471890bc2c2a98528e0d4efc682"
+    },
+    {
+      "path": "src/cg_frontier/assets/preprocess.py",
+      "bytes": 19395,
+      "sha256": "dad4197e92ddc99a78d73ce65879661274e3908734b590613972a899c03fc840"
+    },
+    {
+      "path": "src/cg_frontier/compression/__init__.py",
+      "bytes": 1239,
+      "sha256": "a90f06f412770365c9d758d6f6985db66dc0d9e61b09328c8c0605ac94eeeed5"
+    },
+    {
+      "path": "src/cg_frontier/compression/adaptive_basecolor.py",
+      "bytes": 29363,
+      "sha256": "7eba16d4e9e6155bb75dd5fd1b073f36d9153ee13da842d386ca447131b27544"
+    },
+    {
+      "path": "src/cg_frontier/compression/affine_color.py",
+      "bytes": 34576,
+      "sha256": "51ad4af458522615da44c22a6ea1b895d04a283d007b241ab2255cb3e5eea7d2"
+    },
+    {
+      "path": "src/cg_frontier/compression/affine_gradient_audit.py",
+      "bytes": 13545,
+      "sha256": "d503fcd1d4e274a6ec2cd1d96e929effddbd01693367b26ebf59464971bfa746"
+    },
+    {
+      "path": "src/cg_frontier/compression/affine_lightrel_trajectory_export.py",
+      "bytes": 6645,
+      "sha256": "108e9a3685c0711373e8217e9ad1cb2478581d3fe1234d4c964e44c386350b67"
+    },
+    {
+      "path": "src/cg_frontier/compression/affine_material.py",
+      "bytes": 12666,
+      "sha256": "2abc0aa56a8e84b1d1afb6b6ee33120923d948e4df9d9aad3c3e42985e5948a3"
+    },
+    {
+      "path": "src/cg_frontier/compression/affine_pca.py",
+      "bytes": 52094,
+      "sha256": "28cd6f21f5b892eaa9c62aa2cc9c774fc916adc38b23817c8ae147fee54a648e"
+    },
+    {
+      "path": "src/cg_frontier/compression/affine_pca_audit.py",
+      "bytes": 4563,
+      "sha256": "2b9bda888b94459cc0f42f898a6bc44f629afb0fcc28bcc33629701ace8b30c5"
+    },
+    {
+      "path": "src/cg_frontier/compression/affine_regularizers.py",
+      "bytes": 4106,
+      "sha256": "51209f9b95640b999ebe7e092148111e1d30f827212e5f7c3312bd9bbac15247"
+    },
+    {
+      "path": "src/cg_frontier/compression/affine_training.py",
+      "bytes": 33315,
+      "sha256": "73979996a4638c36a9e631b3d5a425312a66b91d69f5e9c4f5ca98343cb06e0f"
+    },
+    {
+      "path": "src/cg_frontier/compression/affine_trajectory_export.py",
+      "bytes": 11948,
+      "sha256": "c0cd0619c935de174a5b2f0c5cd3a8e04c0b9f85f911e4f2e941b20752277e5b"
+    },
+    {
+      "path": "src/cg_frontier/compression/affine_ue_export.py",
+      "bytes": 16615,
+      "sha256": "19615e1560ee05a6a97072fe59db6c0c6a75bb77ab35d1898c9f19992630e9dc"
+    },
+    {
+      "path": "src/cg_frontier/compression/artifact_analysis.py",
+      "bytes": 15928,
+      "sha256": "959fc6b177fea6d01bcdfe0863fc4de10d75c73c28453f14c151ba6347e75bda"
+    },
+    {
+      "path": "src/cg_frontier/compression/basecolor_dynamic_constraint.py",
+      "bytes": 4645,
+      "sha256": "6710f1b3c546587463ab425c9ff0f83e30a41bcd7443d06d736f556e7472e40c"
+    },
+    {
+      "path": "src/cg_frontier/compression/basecolor_priority.py",
+      "bytes": 19388,
+      "sha256": "35055e384be678f704d41c1aae3905d2bfe614a86539cd0826ba29b2ffddded7"
+    },
+    {
+      "path": "src/cg_frontier/compression/decode_then_filter.py",
+      "bytes": 12305,
+      "sha256": "2ac33379f73583d58faf2d80fffb1f864dd8bcf8a406824e3f5710f6226b802d"
+    },
+    {
+      "path": "src/cg_frontier/compression/decode_then_filter_training.py",
+      "bytes": 53519,
+      "sha256": "f74c42cbb17d789952c6cfde78355976258b4e5ad4451d5004bb05e5f9c21a0c"
+    },
+    {
+      "path": "src/cg_frontier/compression/deployment_parity.py",
+      "bytes": 10075,
+      "sha256": "d1c74bdc8bdf71fc2c745bced4a654bf56007aa440eac1f35f965e08a6465dee"
+    },
+    {
+      "path": "src/cg_frontier/compression/deployment_parity_training.py",
+      "bytes": 5874,
+      "sha256": "0c1bf89ac4f7fbc4009c7d3ace7059f63022444e1a63a1d5e7ce93ffdb711f09"
+    },
+    {
+      "path": "src/cg_frontier/compression/exact_basecolor.py",
+      "bytes": 14503,
+      "sha256": "994e779b2902ab2b6ffb0b0f6233171705b15347e925417c3699a501d4e79b6a"
+    },
+    {
+      "path": "src/cg_frontier/compression/exact_basecolor_experiment.py",
+      "bytes": 44731,
+      "sha256": "e820508c22c7cf7e7ad7042072dd8a4bc1d14f51fe63b595a42a25ae92f46a0b"
+    },
+    {
+      "path": "src/cg_frontier/compression/filter_aware.py",
+      "bytes": 13819,
+      "sha256": "4b715076840ee1b29f818f75b2fb6b7b6e09e4e27657536e8f89efb3d6490855"
+    },
+    {
+      "path": "src/cg_frontier/compression/hybrid.py",
+      "bytes": 11703,
+      "sha256": "b9e931f485d5a0bb88addd03e27653841c3d64501dd0f3acf69bad53b5b0c7e2"
+    },
+    {
+      "path": "src/cg_frontier/compression/hybrid_direct_scalars.py",
+      "bytes": 4534,
+      "sha256": "1b4efa34e8587314019fa0a413223aa32db07dc8817a858ebc2e4221d603bcd4"
+    },
+    {
+      "path": "src/cg_frontier/compression/hybrid_factorization.py",
+      "bytes": 12538,
+      "sha256": "47bb37671ec86e8ccd2aafe51f9fd23455201af8620cfea4f36a70deaf16d0d3"
+    },
+    {
+      "path": "src/cg_frontier/compression/interpolation_analysis.py",
+      "bytes": 10835,
+      "sha256": "1d4e06ba10703c703bb8cc5eed0a29e4d2407f4ca4473ce55928f5cd627812b7"
+    },
+    {
+      "path": "src/cg_frontier/compression/material.py",
+      "bytes": 19563,
+      "sha256": "ab48c225cc447e461edd5675440b7f1d23e591c79ae2f5bceb458c61afcca060"
+    },
+    {
+      "path": "src/cg_frontier/compression/monotone_basecolor.py",
+      "bytes": 42279,
+      "sha256": "883b5e6921035018fc983aaf1c049146f711d7e2d2b097f57e207ee30cf39e77"
+    },
+    {
+      "path": "src/cg_frontier/compression/raw_orthogonal_training.py",
+      "bytes": 3961,
+      "sha256": "c78fc093e453c9c222b5506026c7f339ec42ed1d7ca07fe56704fffa4cb7dbff"
+    },
+    {
+      "path": "src/cg_frontier/compression/render_ablation.py",
+      "bytes": 7825,
+      "sha256": "4ef5437f225656a76b35dfe1825a314b3204b249e0adce8ac150f83d24644cca"
+    },
+    {
+      "path": "src/cg_frontier/compression/render_ablation_continuation.py",
+      "bytes": 3964,
+      "sha256": "e8bae81662ceb4dbde3939ea7c3a71b2f4808dbbae5b310f36e825d252faf6dc"
+    },
+    {
+      "path": "src/cg_frontier/compression/render_ablation_long_continuation.py",
+      "bytes": 4176,
+      "sha256": "3b74c76e89d3756d491f4ea3892d6bc61e2931832bd7128618aadf442ac876df"
+    },
+    {
+      "path": "src/cg_frontier/compression/render_loss.py",
+      "bytes": 14432,
+      "sha256": "819f26d950cfcb9202dbc57da950fbf791a20d16594123ec4f466093283be531"
+    },
+    {
+      "path": "src/cg_frontier/compression/repair.py",
+      "bytes": 9892,
+      "sha256": "787fda365f7ab1bed6dbbd9b5bb8a57a67ad4d2ab364a56028a7b5c047ab785b"
+    },
+    {
+      "path": "src/cg_frontier/compression/ue_decode_then_filter_export.py",
+      "bytes": 29150,
+      "sha256": "0e498ff09b04294a954830b6963084725e424682880480e7a9ee2efc46efd8d1"
+    },
+    {
+      "path": "src/cg_frontier/compression/ue_exact_basecolor_export.py",
+      "bytes": 11054,
+      "sha256": "2517ddbf1022b6318147304b7496907bb1b2538ab980a3bf1bd3ffb37e9df88d"
+    },
+    {
+      "path": "src/cg_frontier/compression/ue_export.py",
+      "bytes": 22166,
+      "sha256": "73006dd23a4de2cd9319a201b20522be3c7f38ba37a80250e6a6118bba841a1d"
+    },
+    {
+      "path": "src/cg_frontier/compression/ue_hybrid_direct_scalars_export.py",
+      "bytes": 13818,
+      "sha256": "8f8814411dc3ffe65132b75067d9876159bbb43795ccfbed28f46517524b678d"
+    },
+    {
+      "path": "src/cg_frontier/experiment_io.py",
+      "bytes": 3199,
+      "sha256": "879b280626d387143184ce8ad82fc8165a916bbfee8f9deccff15821ccb7f6ce"
+    },
+    {
+      "path": "src/cg_frontier/render/__init__.py",
+      "bytes": 790,
+      "sha256": "4d124ae8910ac721048fb1bd5d0dbec616d5d2bcf44494bcbcbd0ab6e911c668"
+    },
+    {
+      "path": "src/cg_frontier/render/camera_relative_lighting.py",
+      "bytes": 4168,
+      "sha256": "8e284f533d634ff3515bad74ca8648d18c019eb2d89726759350ddc97aed7110"
+    },
+    {
+      "path": "src/cg_frontier/render/canonical_cube.py",
+      "bytes": 4366,
+      "sha256": "0c0913fe7c6963057e927a3286e7888cd09e8a174f04e6320901f6b79c4b9aee"
+    },
+    {
+      "path": "src/cg_frontier/render/canonical_v2.py",
+      "bytes": 12021,
+      "sha256": "278b41a9562b8a66382f7de04f77273267877b49cf441c67abd0e9675535790d"
+    },
+    {
+      "path": "src/cg_frontier/render/decode_then_filter.py",
+      "bytes": 5656,
+      "sha256": "4c6d150928205385a17dd879f07b79bf08b069ffc38d03dd27dcdbe201d8dd17"
+    },
+    {
+      "path": "src/cg_frontier/render/gbuffer.py",
+      "bytes": 28265,
+      "sha256": "f77172f73842c4f2f6db47d1f8f0af658bce733bd96adfee5c452ff91ccdea01"
+    },
+    {
+      "path": "src/cg_frontier/render/generic_c4_rig.py",
+      "bytes": 7124,
+      "sha256": "c191814a0b70a54411d1884d46e7f39b500a29a887e04ab392eb759563237644"
+    },
+    {
+      "path": "src/cg_frontier/render/pbr.py",
+      "bytes": 12952,
+      "sha256": "9fb4f867258bd883f874b481e1d838f88e93ebc66017b928da8df14afa615474"
+    },
+    {
+      "path": "tests/README.md",
+      "bytes": 1180,
+      "sha256": "2923b426faf5e7d1731950f34c0ad10e7d8c9b67416dcb4b79ad9842235e9a20"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 499,
+      "sha256": "804731d1954a0fbb01078af231447d063f1526ff2c401acd67e406f087341c5d"
+    },
+    {
+      "path": "tests/test_adaptive_basecolor.py",
+      "bytes": 14281,
+      "sha256": "b8b3b76c40f8ff98ea6d9f839b950da4ac068b3a447e324b7f0c25473da06e2d"
+    },
+    {
+      "path": "tests/test_affine_40k_runner.py",
+      "bytes": 3705,
+      "sha256": "4f8a874fc5818dd9f1239b358255c7d1fa6b2cb62179c087e70a315963e25500"
+    },
+    {
+      "path": "tests/test_affine_chroma8_l0_40k_runner.py",
+      "bytes": 5969,
+      "sha256": "0f1197b80d6a31ad2bcdd5f828252b2b4ca2c711d4bf42e7f2c3e20439f1deed"
+    },
+    {
+      "path": "tests/test_affine_color.py",
+      "bytes": 11459,
+      "sha256": "34800a6239c414068185a35faa2746c428767fe226b73e2e93d34eda3fa71c2d"
+    },
+    {
+      "path": "tests/test_affine_color_audit_runner.py",
+      "bytes": 2348,
+      "sha256": "88b4dc60051e23f67db3c4995fbd43c35941d0175e91aa730aa31c39184bb5ae"
+    },
+    {
+      "path": "tests/test_affine_color_risk_training_runner.py",
+      "bytes": 3768,
+      "sha256": "2baac6af1616772f494859f8a365087c25bd8c5446a74be24bff2341718e61d2"
+    },
+    {
+      "path": "tests/test_affine_color_training_runner.py",
+      "bytes": 5505,
+      "sha256": "b7ee2b97c547b5f8cfa2aabea1aa85fd9815471ceda0c278bcb82f770a223969"
+    },
+    {
+      "path": "tests/test_affine_gradient_audit.py",
+      "bytes": 3543,
+      "sha256": "c5cf1de88ffa882c96a3f58eb0920033300044dd118358e1a9c2f6e3f41d1e6d"
+    },
+    {
+      "path": "tests/test_affine_l0_80k_runner.py",
+      "bytes": 4108,
+      "sha256": "95c8c96ebf8d7e1f0ee23dee127cf50007c9779036c98d193f709c44d7e22eb2"
+    },
+    {
+      "path": "tests/test_affine_lightrel_audit.py",
+      "bytes": 1358,
+      "sha256": "e11b3117f66f090c7d1bd6f609e08e4bb9f5ceac398df3228adad46a3872d859"
+    },
+    {
+      "path": "tests/test_affine_lightrel_preflight.py",
+      "bytes": 1729,
+      "sha256": "90ee5ea8950de6b55e57ad0a7930da75bc1b8f179bd0dbf68f32713b0a2e0fce"
+    },
+    {
+      "path": "tests/test_affine_lightrel_runner.py",
+      "bytes": 2732,
+      "sha256": "04872535ff70b37d533734fbb487d89f900f21f902a84367138271b59a114224"
+    },
+    {
+      "path": "tests/test_affine_material.py",
+      "bytes": 8319,
+      "sha256": "0e4c79806dc08b460d08600dcde5df6cc64c5afdb2d5c27afbe5afeb183d0ad4"
+    },
+    {
+      "path": "tests/test_affine_pca.py",
+      "bytes": 30772,
+      "sha256": "b4d33c10da66943a772a95bb675270771fcaf14f0328a517a914cc74229b43f7"
+    },
+    {
+      "path": "tests/test_affine_pca_audit.py",
+      "bytes": 3122,
+      "sha256": "4385847e3b26504a0e8993573fc7d0e2addf7b042284b3a5a54eee928561bb48"
+    },
+    {
+      "path": "tests/test_affine_regularizers.py",
+      "bytes": 3944,
+      "sha256": "a970718485ecd1ef8001e0857a9ffdf0fe45070c3cf8c76ce3e7dc6271f3c982"
+    },
+    {
+      "path": "tests/test_affine_render_sampling_audit.py",
+      "bytes": 4719,
+      "sha256": "fa7342122fccc939c752684f69d362029d792ff1daf1d5eba450d8e3ecb783c0"
+    },
+    {
+      "path": "tests/test_affine_training.py",
+      "bytes": 39773,
+      "sha256": "01fdbdc6504b1f285a1aefb247529eefdd4dbc5b08d0499dcc1714a7a32e00cf"
+    },
+    {
+      "path": "tests/test_affine_ue_export.py",
+      "bytes": 9334,
+      "sha256": "900fa201a4351641606b6e1d3871909cf2d2d7e7e1b2e301df13824ce4966a29"
+    },
+    {
+      "path": "tests/test_affine_ue_lightrel_trajectory.py",
+      "bytes": 2373,
+      "sha256": "18602bd2a0e5446fce95c04072ed2bbe69f9b26260efd9483cd5bb53c3d65c0f"
+    },
+    {
+      "path": "tests/test_affine_ue_trajectory.py",
+      "bytes": 6187,
+      "sha256": "53cf215ecbeee9f595b7408d6d695bedde98d35b0ed7e8885dc031916f773abb"
+    },
+    {
+      "path": "tests/test_artifact_analysis.py",
+      "bytes": 3482,
+      "sha256": "87ec9cf5918cc2389514788ab9a67831773363ee862d973a00a2e3842c490a96"
+    },
+    {
+      "path": "tests/test_asset_preprocess.py",
+      "bytes": 9693,
+      "sha256": "eddfa1c060206df6323b4f332ae84bfa6371e069af44924865b8d1e5d0a663cd"
+    },
+    {
+      "path": "tests/test_barramundi_random_initialization.py",
+      "bytes": 4671,
+      "sha256": "e296561f14dc14256863d92e13970910c96557df5a35bc60f5feda1acceec47f"
+    },
+    {
+      "path": "tests/test_basecolor_dynamic_constraint.py",
+      "bytes": 2547,
+      "sha256": "eaf275ac7aab6fec82f52959b67524cd7b23c84cc1b184ecfa17eb7d18a03204"
+    },
+    {
+      "path": "tests/test_basecolor_priority.py",
+      "bytes": 14113,
+      "sha256": "cd2e3ceeec2ffe148a0282e6b606c14267d0853fe30b8e4f36c12efd533b969c"
+    },
+    {
+      "path": "tests/test_basecolor_priority_runner.py",
+      "bytes": 8367,
+      "sha256": "ffaad0fe3f56e2597881c7d99e3039435fb1d1ed371c4f7dc9027205792b9a20"
+    },
+    {
+      "path": "tests/test_c4_render_ablation.py",
+      "bytes": 14627,
+      "sha256": "10750c1b64b7da0bed867163fc5a7c64a3e5225ac4030178eda4310e0b6fa10f"
+    },
+    {
+      "path": "tests/test_c4_render_ablation_lantern_40k.py",
+      "bytes": 5696,
+      "sha256": "211d18e90d97d5c6c0ebed3c7da23488412a1c7472c5e7c9220bc7b9a10764c3"
+    },
+    {
+      "path": "tests/test_c4_render_ablation_lantern_render_160k.py",
+      "bytes": 6299,
+      "sha256": "844bbe89a29449909e3bb96de565e14629258cb7e37e5cec4036ee1511ba6f49"
+    },
+    {
+      "path": "tests/test_camera_relative_lighting.py",
+      "bytes": 3079,
+      "sha256": "adf40f5279182347d9c8f462962e79bee4d3c8a5442b6a91d1494f77011d035d"
+    },
+    {
+      "path": "tests/test_canonical_cube.py",
+      "bytes": 4468,
+      "sha256": "a1057f1301e00ac9e4e911645411513430bd41b3407c92966c7b74011fc0dd7c"
+    },
+    {
+      "path": "tests/test_canonical_renderer_v2.py",
+      "bytes": 5316,
+      "sha256": "4273582e934d37fd32d124b50f942caf045724bd3aa41f7fae938503274f453c"
+    },
+    {
+      "path": "tests/test_complex_asset_validation.py",
+      "bytes": 5981,
+      "sha256": "685c9c57967e46988ecfac55618919eb9f250e6051378f275432a215a068ce04"
+    },
+    {
+      "path": "tests/test_decode_then_filter.py",
+      "bytes": 48953,
+      "sha256": "a7cd707bbd28d35417a9d7bc7cdb2ddc732e10e2208bceb22499eaafa511c747"
+    },
+    {
+      "path": "tests/test_deployment_parity.py",
+      "bytes": 9445,
+      "sha256": "cae4559e9f31d66b0376b7598cf0c4e1e27e046d5c6c2e4f7103acd36433d2af"
+    },
+    {
+      "path": "tests/test_exact_basecolor.py",
+      "bytes": 6281,
+      "sha256": "d8e098d75fc26ab6acda9e76851338aee44cb824302f16bc7daa96f38a43dbc3"
+    },
+    {
+      "path": "tests/test_exact_basecolor_experiment.py",
+      "bytes": 7544,
+      "sha256": "adeb161f832787fdc2995f2aa308a24193a296a7bb0fef644cfd846bfc36dde9"
+    },
+    {
+      "path": "tests/test_experiment_io.py",
+      "bytes": 3460,
+      "sha256": "f7729315827458414a2c04a77fa5ba37b3b190e6bbd88d91e4daf60c31fa4905"
+    },
+    {
+      "path": "tests/test_filter_aware.py",
+      "bytes": 8747,
+      "sha256": "6347edd16d7b02eef07a3abf0df15ebff66cef3e6a82378c0e2a433672ba6be4"
+    },
+    {
+      "path": "tests/test_gbuffer.py",
+      "bytes": 4082,
+      "sha256": "c344e097e0b79207f095f8704f0ed80a10b9a72fd7c8d431b4e2429df1fa841b"
+    },
+    {
+      "path": "tests/test_generic_c4_rig.py",
+      "bytes": 911,
+      "sha256": "2d3576a74100553a3c60d9806cc16569866ecfa14c3a39b769c6310234b244b5"
+    },
+    {
+      "path": "tests/test_gltf_mesh.py",
+      "bytes": 7276,
+      "sha256": "66c932c8ad7662f778dda0d586f088fc99ed7c8a1e6d0c05dc2f6ed4f87d22fb"
+    },
+    {
+      "path": "tests/test_hybrid_direct_scalars.py",
+      "bytes": 4084,
+      "sha256": "1cfe4b359b097f67fe4335b4114b772f0a8e8b8392e62a176b088965cc7599d8"
+    },
+    {
+      "path": "tests/test_hybrid_factorization.py",
+      "bytes": 8088,
+      "sha256": "782e55b516081e9c917b4a7e48c4af8dbfca764d4e29349009320e28ecd15722"
+    },
+    {
+      "path": "tests/test_hybrid_interpolation.py",
+      "bytes": 6886,
+      "sha256": "f3507fa3bae931fc0b237ac48ebb16174c3b1be82e5126af1e2611b567d01914"
+    },
+    {
+      "path": "tests/test_interpolation_analysis.py",
+      "bytes": 6856,
+      "sha256": "13c8b0a32158327ec37f2d72bf072239fe5b0182f017b4cc109c800e179a7256"
+    },
+    {
+      "path": "tests/test_material_compression.py",
+      "bytes": 4781,
+      "sha256": "3a1166246f71ea6b67c0dfa90c3e41e3e46c794c18dde00e00faaf931f6e6550"
+    },
+    {
+      "path": "tests/test_monotone_basecolor.py",
+      "bytes": 11847,
+      "sha256": "a2404c374974f550a9609248b997b9cf918d0559f765871ba0b531b7b689f759"
+    },
+    {
+      "path": "tests/test_nvdiffrast_smoke.py",
+      "bytes": 1403,
+      "sha256": "cc8bfc0cdb6bf4a4cebe0bbe8c6083789d7dffeb7fc724440ae470ed6db36719"
+    },
+    {
+      "path": "tests/test_pbr.py",
+      "bytes": 5841,
+      "sha256": "1ff0e14f502f1164994676cc6d456fd1a7256d180d68dd691945ef9a2905098a"
+    },
+    {
+      "path": "tests/test_public_repo_audit.py",
+      "bytes": 900,
+      "sha256": "71b2a27e89782e137590c1e2335d602381dbbdce82530d6d2df62b2048140655"
+    },
+    {
+      "path": "tests/test_pytest_workspace_hygiene.py",
+      "bytes": 348,
+      "sha256": "c04c9b8676b1510a646afcfbc5aef1132f0c2a1be6c636920a7385597f7480c0"
+    },
+    {
+      "path": "tests/test_repair.py",
+      "bytes": 2903,
+      "sha256": "4787c04b4c1449d3ab0ac8a95336f3f3d9836f004c5a6b9d55fdd26174ea1c05"
+    },
+    {
+      "path": "tests/test_ue_decode_then_filter_export.py",
+      "bytes": 8174,
+      "sha256": "ed07f1d7c9d753e6bd091aef0279fae302b911d38e4fe3d2e0eb156b6cbe1c78"
+    },
+    {
+      "path": "tests/test_ue_decoder_export.py",
+      "bytes": 4297,
+      "sha256": "6994c85b63e044cd4c9b58b7b8d8ed72adfab1beb6d5a1e563768a8c4083f618"
+    },
+    {
+      "path": "tests/test_ue_exact_basecolor_export.py",
+      "bytes": 4217,
+      "sha256": "d0bcf83fe972c652377f9fed98a2c60a31a903fa43ddfceab613baa0bf9c102c"
+    },
+    {
+      "path": "tests/test_ue_hybrid_direct_scalars_export.py",
+      "bytes": 1887,
+      "sha256": "2819252b594af3d0f476dd70f0e00d3c795019a0dce476313fcce89ae9baec3e"
+    },
+    {
+      "path": "third_party/README.md",
+      "bytes": 669,
+      "sha256": "3af46e7b3d663e625a09bc8a0df65dd1fe692ad6281b380b947cc1d2d6b57083"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/CGCompressionDemo.uproject",
+      "bytes": 469,
+      "sha256": "dd657734c6b0f7aa4c28fb64746b6d074ce473725f31a6425586f39d5739ce1f"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Config/DefaultEditor.ini",
+      "bytes": 58479,
+      "sha256": "fe56abf9752dc32ffb00cd77108eacaf701b9002e8e90c78ae7e4323fa7de2e2"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Config/DefaultEngine.ini",
+      "bytes": 3005,
+      "sha256": "310bac68226e549a4dc0455076ca9cba5c4a11de3e4e93b69197ba5214fa43a3"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Config/DefaultGame.ini",
+      "bytes": 357,
+      "sha256": "2a1972daa4668dca3c7d47f1f665beafa85e7b9a7581b67fe8f8feccc0cc40e0"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Config/DefaultInput.ini",
+      "bytes": 9022,
+      "sha256": "967bdf33123519d5270f44b2a686be523de7326cd2c038623b1d1c31fe7b49ea"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/capture_scifihelmet_hybrid_r0b.py",
+      "bytes": 7678,
+      "sha256": "d69f9c0bd567279d2d4ce3db96cc7b075821fe905257b430ccebf96ec391168d"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/capture_scifihelmet_oracle_fixed.py",
+      "bytes": 7440,
+      "sha256": "0bd1de234e7a59799b4c5cb8b94ce7a6b1b076625b979613b742f91bcc75c848"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/capture_ue_bc_latent_residency_v1.py",
+      "bytes": 4215,
+      "sha256": "f64ab03fca40f2d9c482554e059fabb091cfe301e6f6965e83ac64f8b9921977"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/capture_ue_bc_latent_visual_editor_v1.py",
+      "bytes": 7494,
+      "sha256": "88e077dd1f65302aff7378076bb3d096585a04e46015df80370c6de8e5c96bfc"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/capture_ue_runtime_residency_v1.py",
+      "bytes": 6026,
+      "sha256": "6791673e60b3d3a2099ed7949b6b8362e55f1c132ce6fee5155629ece455900b"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/collect_ue_runtime_evidence_v1.py",
+      "bytes": 10036,
+      "sha256": "d531f9ca102462de11f845270e2e0b85833b86b52f2a2721e2310e8dd7429ded"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/init_unreal.py",
+      "bytes": 1125,
+      "sha256": "8e870a850140a320f983473f6941c086c6a012cbdcbfeda5e0c0c72fd7c80a43"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/inspect_ue_runtime_evidence_scenes_v1.py",
+      "bytes": 3797,
+      "sha256": "b599cb1cb31a7c182df5700992196d9f3c303cd913c5815523e50b3077413866"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/prepare_ue_runtime_timing_map_v1.py",
+      "bytes": 5277,
+      "sha256": "79923768c8069fac7e9197597af269f42600e428c67447d62a1e06c07bc2fc92"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_c4_lantern_render_160k_preview.py",
+      "bytes": 12429,
+      "sha256": "8c3cc51cef6c7ebf0ae4dee3da86094160bf97cb39102b1acc50f8cc77f06487"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_c4_render_ablation_20k_preview.py",
+      "bytes": 20269,
+      "sha256": "1997777daf23cb09b46dab5de2e53c7451ad902654580f9775170feefda14c11"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_scifihelmet_affine_chroma8_trajectory.py",
+      "bytes": 2048,
+      "sha256": "10a76e965ce82f7a1d961c3bd00f00d5cf91f8ff507957aabc0ff90f40c0d8b4"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_scifihelmet_affine_lightrel_40k_trajectory.py",
+      "bytes": 2317,
+      "sha256": "7a63d837826bba752797679d76dd1caabaf426850472747768f359733dadfe18"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_scifihelmet_affine_preview.py",
+      "bytes": 24411,
+      "sha256": "c0ee3776b33920ab8d2b8e9df834201fa2ebe3bdd3474878bf8e7d00d3decea5"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_scifihelmet_arc_preview.py",
+      "bytes": 12821,
+      "sha256": "9e2712027d9df2a2936cc0c1514bc0182798fd90b517931d4396e86744577fa2"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_scifihelmet_compressed.py",
+      "bytes": 19633,
+      "sha256": "f9ac61e10c0e97618042b7ec274c3c46478c999f1d37203e79e1e637e2722827"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_scifihelmet_dtf_preview.py",
+      "bytes": 24732,
+      "sha256": "bc1d5f997a5513b280b3bcd25f25b1d53d0430ebdabb15b1fab351f420ff92d3"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_scifihelmet_exact_basecolor_v1.py",
+      "bytes": 16922,
+      "sha256": "2e415379c15f24a838d348be94f543ceae4cb0aad9c5b6bc591d23124ceeea58"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_scifihelmet_hybrid_r0b.py",
+      "bytes": 20258,
+      "sha256": "7b5ff48aa05014e543a6052e9c404c49737509f43293cce17e466207196e595e"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_scifihelmet_oracle_analysis.py",
+      "bytes": 13383,
+      "sha256": "7a2862c1cae8ee0e03dd09d9412fc8ad7d31a5f51bce0eb1e16c739db07bd4e7"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_ue_bc_latent_feasibility_v1.py",
+      "bytes": 9651,
+      "sha256": "1432fae951ef4425e5fb6b4c90ef98108a2f4a72f2a559af45c727a5b40ae93d"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_ue_bc_latent_visual_v1.py",
+      "bytes": 5897,
+      "sha256": "239088a7c664a24950c55e137dd88b917d5ed56902741289284ef3e7c146a85a"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/setup_ue_runtime_evidence_v1_maps.py",
+      "bytes": 6659,
+      "sha256": "48b68a43c1f90564d04b10c6d08d78a6e5e96dc42a57080a7f33bca28e90efd7"
+    },
+    {
+      "path": "ue_demo/CGCompressionDemo/Content/Python/validate_ue_runtime_evidence_v1_map.py",
+      "bytes": 6308,
+      "sha256": "1b92ddd7d0e9402d5bf504568a0ca4de4c76503698164ab164b34a50595ee7eb"
+    },
+    {
+      "path": "ue_demo/README.md",
+      "bytes": 1803,
+      "sha256": "9c82e46f042da8570dd5e9b7b1fe5ff26256b4719421e9d437f3622777f1b8ea"
+    }
+  ]
+}

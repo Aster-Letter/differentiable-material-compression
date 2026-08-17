@@ -1,0 +1,156 @@
+schema_version: 1
+experiment: scifihelmet_c4_dtf_v1
+renderer: decode_then_filter_renderer_v1
+inputs:
+  gltf: assets/source/glTF-Sample-Assets/Models/SciFiHelmet/glTF/SciFiHelmet.gltf
+  core4_manifest: configs/assets/scifihelmet_core4.yaml
+  core4_dir: assets/processed/SciFiHelmet/core4
+  precheck_screen_uv: outputs/gbuffer/scifihelmet/uv.npy
+  precheck_screen_mask: outputs/gbuffer/scifihelmet/mask.npy
+representation:
+  texture_resolution: [2048, 2048]
+  storage: unorm8
+  lod: 0
+  mipmaps: false
+  address_mode: wrap
+  latent_channel_upper_bound: 5
+candidates:
+  c4_dtf_16_relu_precheck:
+    latent_channels: 4
+    decoder_width: 16
+    activation: relu
+    role: paired_precheck
+    max_steps: 10000
+  c4_dtf_16_silu_precheck:
+    latent_channels: 4
+    decoder_width: 16
+    activation: silu
+    role: paired_precheck
+    max_steps: 10000
+  c4_dtf_16_selected:
+    latent_channels: 4
+    decoder_width: 16
+    activation: selected_precheck_winner
+    role: primary_full_training
+    max_steps: 80000
+  c4_dtf_32_diagnostic:
+    latent_channels: 4
+    decoder_width: 32
+    activation: selected_precheck_winner
+    role: conditional_capacity_diagnostic
+    max_steps: 10000
+  c4_dtf_32_selected:
+    latent_channels: 4
+    decoder_width: 32
+    activation: selected_precheck_winner
+    role: conditional_full_capacity
+    max_steps: 80000
+  c5_dtf_16:
+    latent_channels: 5
+    decoder_width: 16
+    activation: selected_precheck_winner
+    role: conditional_representation_upper_bound
+    max_steps: 80000
+training:
+  seed: 20260804
+  split_seed: 20260803
+  paired_precheck_steps: 10000
+  full_training_steps: 80000
+  preflight_steps: 10
+  batch_size: 8180
+  log_interval: 100
+  checkpoint_interval: 1000
+  selection_start: 20000
+  selection_interval: 5000
+  selection_render_camera_limit: 3
+  selection_evaluation_samples: 262144
+  evaluation_samples: 262144
+  preflight_evaluation_samples: 4096
+  high_gradient_top_fraction: 0.10
+  phases:
+    - {name: material_continuous_pretrain, start: 0, stop: 15000}
+    - {name: render_first_joint, start: 15000, stop: 65000}
+    - {name: low_lr_polish, start: 65000, stop: 80000}
+  dtype: float32
+  amp: false
+  optimizer: Adam
+  optimizer_implementation: fused_cuda_direct_unorm
+  serial_gpu_only: true
+  precheck_schedule:
+    warmup_stop: 500
+    warmup_latent_lr: 0.02
+    warmup_decoder_lr: 0.001
+    cosine_stop: 10000
+    cosine_latent_lr: 0.002
+    cosine_decoder_lr: 0.0001
+training_pool:
+  camera_limit: 48
+  light_limit: 6
+  camera_triangle_coverage_increment_stop: 0.005
+  cache_camera_gbuffer_only: true
+  randomize_lights_online: true
+render:
+  resolution: [256, 256]
+  camera_radius: 4.5
+  target: [0.0, 0.0, 0.0]
+  up: [0.0, 1.0, 0.0]
+  vertical_fov_degrees: 45.0
+  near: 0.1
+  far: 10.0
+  minimum_roughness: 0.045
+  display_exposure: 1.5
+  linear_psnr_data_range: 2.0
+train_cameras:
+  - {name: train_e0_y000, elevation_degrees: 0.0, yaw_degrees: 0.0}
+  - {name: train_e0_y045, elevation_degrees: 0.0, yaw_degrees: 45.0}
+  - {name: train_e0_y090, elevation_degrees: 0.0, yaw_degrees: 90.0}
+  - {name: train_e0_y135, elevation_degrees: 0.0, yaw_degrees: 135.0}
+  - {name: train_e0_y180, elevation_degrees: 0.0, yaw_degrees: 180.0}
+  - {name: train_e0_y225, elevation_degrees: 0.0, yaw_degrees: 225.0}
+  - {name: train_e0_y270, elevation_degrees: 0.0, yaw_degrees: 270.0}
+  - {name: train_e0_y315, elevation_degrees: 0.0, yaw_degrees: 315.0}
+  - {name: train_ep20_y000, elevation_degrees: 20.0, yaw_degrees: 0.0}
+  - {name: train_ep20_y090, elevation_degrees: 20.0, yaw_degrees: 90.0}
+  - {name: train_ep20_y180, elevation_degrees: 20.0, yaw_degrees: 180.0}
+  - {name: train_ep20_y270, elevation_degrees: 20.0, yaw_degrees: 270.0}
+  - {name: train_em15_y045, elevation_degrees: -15.0, yaw_degrees: 45.0}
+  - {name: train_em15_y135, elevation_degrees: -15.0, yaw_degrees: 135.0}
+  - {name: train_em15_y225, elevation_degrees: -15.0, yaw_degrees: 225.0}
+  - {name: train_em15_y315, elevation_degrees: -15.0, yaw_degrees: 315.0}
+  - {name: train_em30_y090, elevation_degrees: -30.0, yaw_degrees: 90.0}
+  - {name: train_em30_y270, elevation_degrees: -30.0, yaw_degrees: 270.0}
+  - {name: train_ep35_y225, elevation_degrees: 35.0, yaw_degrees: 225.0}
+train_lights:
+  - {name: front_right, position: [2.5, 3.0, 4.0], color: [1.0, 0.98, 0.95], radiant_intensity: 90.0, ambient_intensity: 0.04}
+  - {name: front_left, position: [-2.5, 3.0, 4.0], color: [0.95, 0.98, 1.0], radiant_intensity: 90.0, ambient_intensity: 0.04}
+  - {name: rear_top, position: [0.0, 4.0, -3.5], color: [1.0, 0.96, 0.92], radiant_intensity: 80.0, ambient_intensity: 0.04}
+  - {name: rear_low, position: [0.0, -2.5, -4.0], color: [0.92, 0.96, 1.0], radiant_intensity: 72.0, ambient_intensity: 0.04}
+  - {name: side_right, position: [4.0, 0.5, 0.0], color: [1.0, 0.92, 0.88], radiant_intensity: 82.0, ambient_intensity: 0.04}
+  - {name: side_left, position: [-4.0, 0.5, 0.0], color: [0.88, 0.94, 1.0], radiant_intensity: 82.0, ambient_intensity: 0.04}
+batch_mix:
+  screen_space_render: 0.45
+  uniform_uv_chart_subpixel: 0.35
+  generic_high_gradient_boundary: 0.10
+  texel_center_quantization_anchor: 0.10
+loss:
+  render_hdr_l1: 1.0
+  render_display_l1: 0.25
+  base_color_linear_l1: 0.5
+  normal_cosine: 0.5
+  roughness_l1: 0.25
+  metallic_l1: 0.25
+  subpixel_material_anchor: 0.5
+  texel_center_anchor: 0.25
+  unorm8_quantization: 0.25
+selection:
+  checkpoint_tracks: [best-render, best-artifact-safe]
+  best_render_order: [multi_light_hdr, display_ssim, material_error]
+  artifact_safe_prefilter: [rectangular_black_blocks]
+  artifact_safe_order: [novel_dark, halo, metallic_boundary]
+comparison_roles:
+  storage_performance_control: traditional_effective_channel_packing
+  visual_quality_control: r0b_filter_safe_hybrid
+  single_sample_failure_controls: [legacy_single_sample, arc_relu_fresh]
+output_root: outputs/compression/scifihelmet/c4_dtf_v1
+version_control:
+  git_commit: 08ebac3

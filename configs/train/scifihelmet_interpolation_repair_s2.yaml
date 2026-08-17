@@ -1,0 +1,6 @@
+schema_version: 1
+extends: configs/train/scifihelmet_interpolation_repair.yaml
+candidate: s2
+training:
+  warmup_steps: 500
+output_dir: outputs/compression/scifihelmet/interpolation_repair_v1/s2

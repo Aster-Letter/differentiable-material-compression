@@ -1,0 +1,26 @@
+schema_version: 1
+experiment: scifihelmet_c4_affine_color_guard_dual_ratio_1k
+output_root: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-dual-r010-r025-1k-r1
+source:
+  audit_config: configs/train/scifihelmet_c4_affine_color_guard_audit_v1.yaml
+  audit_config_sha256: b01f4657baf99be0a9fc61e1a4fa2ca95e9b0cf6dee845efb5264484c542e81a
+  audit_report: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-audit-r1/gradient_audit.json
+  audit_report_sha256: 1ca8029076d1779358fd76822269acb3f61e326c537eaf8a053d2d8af300cbda
+  gate_policy: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-audit-r1/gate_policy.json
+  gate_policy_sha256: 6bda238a0233ff5cf145547e68107f9dbe1c27efe0f57cab491d1cdd50d61d4a
+  audit_batches: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-audit-r1/audit_batches.pt
+  audit_batches_sha256: 93bd9362c69e5d10a10eca29ee45c21b83b0f211644d3e96680a6bf7ed9f55c3
+  metric_pairs: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-audit-r1/metric_pairs.pt
+  metric_pairs_sha256: f1b6666793a357ba69d68d7f286707b9f2e17abd685c86e74d9a0f66a662f7b7
+training:
+  ratios: [0.10, 0.25]
+  preflight_steps: 10
+  total_steps: 1000
+  checkpoint_steps: [250, 500, 750, 1000]
+  metric_interval: 250
+  progress_interval: 100
+  trajectory_gradient_batches: 5
+  material_batch_size: 4096
+  color_batch_size: 4096
+  color_seed_offset: 23
+  charbonnier_epsilon: 0.001

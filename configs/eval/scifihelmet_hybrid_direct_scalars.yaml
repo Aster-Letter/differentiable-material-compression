@@ -1,0 +1,28 @@
+schema_version: 1
+extends: configs/train/scifihelmet_hybrid_c1.yaml
+inputs:
+  factorization_initialization_report: outputs/compression/scifihelmet/hybrid_factorization_v1/phase0/initialization_report.json
+  d7_training_manifest: outputs/compression/scifihelmet/hybrid_factorization_rerun_v1/d7_p/training_manifest.json
+  phase0_analysis_template: configs/eval/scifihelmet_hybrid_factorization_phase0.yaml
+output_root: outputs/compression/scifihelmet/hybrid_direct_scalars_v1
+candidates:
+  r0a:
+    source: final_d7_normal_causal_oracle_only
+    texture_a: outputs/compression/scifihelmet/hybrid_factorization_rerun_v1/d7_p/texture_a_base_rgb_aux0_rgba8.png
+    texture_b: outputs/compression/scifihelmet/hybrid_factorization_rerun_v1/d7_p/texture_b_aux123_rgb8.png
+    decoder: outputs/compression/scifihelmet/hybrid_factorization_rerun_v1/d7_p/decoder_weights.npz
+    deployment_eligible: false
+  r0b:
+    source: independent_phase0_rank2_normal
+    texture_a: outputs/compression/scifihelmet/hybrid_factorization_v1/phase0/d7_p/texture_a_base_rgb_aux0_rgba8.png
+    texture_b: outputs/compression/scifihelmet/hybrid_factorization_v1/phase0/d7_p/texture_b_aux123_rgb8.png
+    decoder: outputs/compression/scifihelmet/hybrid_factorization_v1/phase0/d7_p/decoder_weights.npz
+    deployment_eligible: true
+expected:
+  logical_channels: 7
+  logical_raw_bytes: 29360128
+  physical_ceiling_bytes: 33554432
+  texture_samples: 2
+  parameters: 32
+  weight_bytes_float32: 128
+  macs_per_pixel: 24

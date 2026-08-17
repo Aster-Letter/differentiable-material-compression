@@ -1,0 +1,40 @@
+schema_version: 1
+experiment: scifihelmet_c4_affine_visual_summary_v1
+output_root: outputs/scifihelmet_c4_affine_v1/visual_summary/bf215f-teacher-r1
+source:
+  preflight_config: configs/train/scifihelmet_c4_affine_v1_preflight.yaml
+  preflight_config_sha256: 01f3fe6f468173e8512819ed5dd4f18ddc11830a2762daa79303f1ef87897508
+  render_pool_config: configs/train/scifihelmet_c4_dtf_camera31_v1.yaml
+  render_pool_config_sha256: c330055a478534040dc7eb60a13e51ba9f5d1e4d5a3614378150b25f3315c712
+  standard_p0_manifest: outputs/scifihelmet_c4_affine_v1/preflight/a874ad-r2/p0-safe/manifest.json
+  standard_p0_manifest_sha256: 2d3f0a8001c398356a497e015f0df5985b8ca0c32e750ccdf8bcde5bb0ede796
+  chroma8_parent_manifest: outputs/scifihelmet_c4_affine_v1/pca_audit/a874ad-residual-r3/candidates/chroma8/manifest.json
+  chroma8_parent_manifest_sha256: 95fa5e05b55fbb2f613e5c8080f4598339700465561aa01c73d21becfa096e3f
+  l0_80k_checkpoint: outputs/scifihelmet_c4_affine_v1/train80k/a874ad-chroma8-l0-camera31-light6-r1/checkpoints/L0/endpoints/step-080000/checkpoint.pt
+  l0_80k_checkpoint_sha256: c91f921f670e4b61e10fca64e976b6c0a5f5d2217ba8ed908218010e26a10050
+  c0_1k_checkpoint: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-dual-r010-r025-1k-r1/runs/C0/checkpoints/C0/endpoints/step-001000/checkpoint.pt
+  c0_1k_checkpoint_sha256: 405f14db29194f91a4a00f2daae9ead5b768611d10c249fd3efd72fb36326e29
+  g2_1k_checkpoint: outputs/scifihelmet_c4_affine_v1/color_risk/bf215f-tail-hue-r010-1k-r2/runs/G2-hue8-macro/checkpoints/G2-hue8-macro/endpoints/step-001000/checkpoint.pt
+  g2_1k_checkpoint_sha256: a89e4ca19a6199d7c7fc8dfb963150cc841f28f395c2aa2a4c5e0d762675942a
+  color_guard_basecolor: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-dual-r010-r025-1k-r1/diagnostics-r1/basecolor_atlas_comparison.png
+  color_guard_yellow: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-dual-r010-r025-1k-r1/diagnostics-r1/yellow_basecolor_comparison.png
+  color_guard_r_minus_b: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-dual-r010-r025-1k-r1/diagnostics-r1/yellow_r_minus_b_comparison.png
+  color_risk_basecolor: outputs/scifihelmet_c4_affine_v1/color_risk/bf215f-tail-hue-r010-1k-r2/diagnostics-r2/basecolor_atlas_comparison.png
+  color_risk_yc_tail: outputs/scifihelmet_c4_affine_v1/color_risk/bf215f-tail-hue-r010-1k-r2/diagnostics-r2/yc_tail_error_atlas_comparison.png
+  color_risk_hue: outputs/scifihelmet_c4_affine_v1/color_risk/bf215f-tail-hue-r010-1k-r2/diagnostics-r2/hue_group_error_atlas_comparison.png
+visual_contract:
+  resolution: [256, 256]
+  columns: [source, standard_p0, chroma8_parent, l0_80k, c0_1k, g2_1k]
+  tail_mass: 0.25
+  tail_scale: 0.0646536722779274
+  hue_scale: 0.031616631895303726
+  views:
+    - {id: front, label: Front, camera_index: 0, light_index: 0, selection_metric: true}
+    - {id: top, label: Top view, yaw_degrees: 0.0, elevation_degrees: 78.0, radius: 4.5, target: [0.0, 0.0, 0.0], light_index: 2, selection_metric: false}
+    - {id: upper_side, label: Upper side, camera_index: 9, light_index: 4, selection_metric: true}
+    - {id: rear_yellow, label: Rear / yellow pipes, camera_index: 20, light_index: 2, selection_metric: false}
+scope:
+  formal_holdout_accessed: false
+  training_started: false
+  ue_started: false
+  presentation_only_views: [top, rear_yellow]

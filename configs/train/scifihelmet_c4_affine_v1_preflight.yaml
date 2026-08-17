@@ -1,0 +1,66 @@
+schema_version: 1
+experiment: scifihelmet_c4_affine_v1
+inputs:
+  gltf: assets/source/glTF-Sample-Assets/Models/SciFiHelmet/glTF/SciFiHelmet.gltf
+  core4_dir: assets/processed/SciFiHelmet/core4
+  core4_manifest: configs/assets/scifihelmet_core4.yaml
+output_root: outputs/scifihelmet_c4_affine_v1/preflight/a874ad-r2
+seed: 20260806
+p0:
+  safety_margin: 0.001
+  weighting: uniform_valid_texel
+  mean_centered: true
+  variance_scaling: false
+calibration:
+  batches: 8
+  target_ratios: [0.02, 0.05, 0.10]
+  selected_tv_ratio: null
+  selected_cube_ratio: null
+training:
+  material_batch_size: 4096
+  latent_learning_rate: 0.001
+  affine_learning_rate: 0.001
+  correctness_steps: 10
+  timing_warmup_steps: 20
+  timing_measured_steps: 100
+render:
+  resolution: [64, 64]
+  cameras:
+    - eye: [0.0, 0.0, 4.5]
+      target: [0.0, 0.0, 0.0]
+      up: [0.0, 1.0, 0.0]
+      vertical_fov_degrees: 45.0
+      near: 0.1
+      far: 10.0
+    - eye: [-2.25, 0.0, 3.897114317]
+      target: [0.0, 0.0, 0.0]
+      up: [0.0, 1.0, 0.0]
+      vertical_fov_degrees: 45.0
+      near: 0.1
+      far: 10.0
+    - eye: [2.25, 0.0, 3.897114317]
+      target: [0.0, 0.0, 0.0]
+      up: [0.0, 1.0, 0.0]
+      vertical_fov_degrees: 45.0
+      near: 0.1
+      far: 10.0
+  light:
+    position: [2.5, 3.0, 4.0]
+    color: [1.0, 0.98, 0.95]
+    radiant_intensity: 90.0
+    ambient_intensity: 0.04
+  minimum_roughness: 0.045
+cube:
+  resolution: 24
+  camera_distance: 2.0
+  light_radius: 4.0
+  light_height_min: 1.5
+  light_height_max: 3.5
+loss:
+  base_color_l1: 1.0
+  normal_cosine: 0.25
+  roughness_l1: 0.5
+  metallic_l1: 0.5
+  helmet_charbonnier: 1.0
+  helmet_log1p: 0.25
+  helmet_charbonnier_epsilon: 0.001

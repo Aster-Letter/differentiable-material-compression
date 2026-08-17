@@ -1,0 +1,30 @@
+schema_version: 1
+asset:
+  gltf: assets/source/glTF-Sample-Assets/Models/SciFiHelmet/glTF/SciFiHelmet.gltf
+  core4_manifest: configs/assets/scifihelmet_core4.yaml
+render:
+  coordinate_system: glTF_right_handed_y_up_front_plus_z
+  resolution:
+  - 512
+  - 512
+  camera:
+    eye:
+    - 0.0
+    - 0.0
+    - 4.5
+    target:
+    - 0.0
+    - 0.0
+    - 0.0
+    up:
+    - 0.0
+    - 1.0
+    - 0.0
+    vertical_fov_degrees: 45.0
+    near: 0.1
+    far: 10.0
+  tangent_basis: reconstructed_uv
+  normal_y_flip: false
+  backface_culling: true
+  texture_filter: linear
+output_dir: outputs/gbuffer/scifihelmet

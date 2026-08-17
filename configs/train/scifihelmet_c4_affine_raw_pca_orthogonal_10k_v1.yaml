@@ -1,0 +1,53 @@
+schema_version: 1
+experiment: scifihelmet_c4_affine_raw_pca_orthogonal_10k_v1
+formal_holdout_access: forbidden
+seed: 20260810
+source:
+  preflight_config: configs/train/scifihelmet_c4_affine_v1_preflight.yaml
+  preflight_config_sha256: 01f3fe6f468173e8512819ed5dd4f18ddc11830a2762daa79303f1ef87897508
+  render_pool_config: configs/train/scifihelmet_c4_dtf_camera31_v1.yaml
+  render_pool_config_sha256: c330055a478534040dc7eb60a13e51ba9f5d1e4d5a3614378150b25f3315c712
+  standard_p0_manifest: outputs/scifihelmet_c4_affine_v1/preflight/a874ad-r2/p0-safe/manifest.json
+  standard_p0_manifest_sha256: 2d3f0a8001c398356a497e015f0df5985b8ca0c32e750ccdf8bcde5bb0ede796
+  raw_parent_artifact_hash: 07c59e9cc07a00f5b0d4740f1c64d46db56d5684dd0ea9513d1f9a94b2c97799
+  adaptive_profile: outputs/adaptive_basecolor_profiles/bf215f-v1/scifihelmet/profile.pt
+  adaptive_profile_sha256: 96f5d99cc4167af1ba4743a9f923c7672413ac4d17c49fb7c20344fd29bb8026
+  basecolor_profile_hash: f2c7a69694bec451fb51e6e6fccdc43cd34a089e92008d20be356b466029b7f5
+  visibility_hash: 41b1b422e31454593f1db026c573478731f4248c19d64c6abbf23587e6a797cc
+training:
+  steps: 10000
+  checkpoint_interval: 1000
+  log_interval: 100
+  sample_metric_interval: 500
+  material_batch_size: 8192
+  color_samples_per_group: 512
+  latent_learning_rate: 0.0002
+  affine_learning_rate: 0.00002
+  support_penalty_weight: 10.0
+  support_margin: 0.0001
+loss:
+  normal_cosine: 0.25
+  roughness_l1: 0.5
+  metallic_l1: 0.5
+  base_color: 1.0
+  helmet_linear: 1.0
+  helmet_log1p: 0.25
+  charbonnier_epsilon: 0.001
+audit:
+  batches: 8
+  output_root: outputs/scifihelmet_c4_affine_v1/raw_pca_orthogonal/bf215f-audit-v1
+candidates:
+  O1-r025: {objective_id: O1, ratio: 0.25, output_root: outputs/scifihelmet_c4_affine_v1/raw_pca_orthogonal/bf215f-o1-r025-10k-v1}
+  O1-r050: {objective_id: O1, ratio: 0.50, output_root: outputs/scifihelmet_c4_affine_v1/raw_pca_orthogonal/bf215f-o1-r050-10k-v1}
+  O2-r025: {objective_id: O2, ratio: 0.25, output_root: outputs/scifihelmet_c4_affine_v1/raw_pca_orthogonal/bf215f-o2-r025-10k-v1}
+  O2-r050: {objective_id: O2, ratio: 0.50, output_root: outputs/scifihelmet_c4_affine_v1/raw_pca_orthogonal/bf215f-o2-r050-10k-v1}
+audit_pairs:
+  - [0, 0]
+  - [9, 4]
+  - [20, 2]
+  - [30, 5]
+visual_views:
+  - {id: front, label: Front, camera_index: 0, light_index: 0}
+  - {id: top, label: Top view, yaw_degrees: 0.0, elevation_degrees: 78.0, radius: 4.5, target: [0.0, 0.0, 0.0], light_index: 2}
+  - {id: upper_side, label: Upper side, camera_index: 9, light_index: 4}
+  - {id: rear_yellow, label: Rear / yellow pipes, camera_index: 20, light_index: 2}

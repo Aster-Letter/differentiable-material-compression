@@ -1,0 +1,35 @@
+schema_version: 1
+inputs:
+  core4_dir: assets/processed/SciFiHelmet/core4
+  texture_a_png: outputs/compression/scifihelmet/hybrid_interpolation_v1/c1/texture_a_base_rgb_aux0_rgba8.png
+  texture_b_png: outputs/compression/scifihelmet/hybrid_interpolation_v1/c1/texture_b_aux1_r8.png
+  decoder_npz: outputs/compression/scifihelmet/hybrid_interpolation_v1/c1/decoder_weights.npz
+frozen_sha256:
+  texture_a_png: f1560e9cb20573312a7a5b55ce89b803e1d88b1a73e84ad3bcb2094d23afe52d
+  texture_b_png: aa2b7433f5d67e2a1608363aafdf02dfc97effe21b7f5b97624a0be0806d0873
+  decoder_npz: b4cbd9bf3c3aaebcc385d58b93279149287d4f229ceea041c061ec6fe13efa72
+representation:
+  candidate: c1
+  texture_a: RGBA8_linear_BaseColor_RGB_plus_aux0
+  texture_b: R8_aux1
+  aux_channels: 2
+  logical_channels: 5
+  theoretical_raw_bytes_no_mips: 20971520
+  texture_samples: 2
+analysis:
+  expected_atlas_hw: [2048, 2048]
+  decode_chunk_size: 262144
+  fixed_row_chunk_size: 128
+  fixed_phases_xy: [[0.25, 0.25], [0.75, 0.25], [0.25, 0.75], [0.75, 0.75]]
+  random_probe_count: 1048576
+  random_chunk_size: 262144
+  random_seed: 20260803
+  luminance_thresholds: [0.02, 0.05, 0.10]
+  dark_ratio: 0.5
+  metallic_boundary_threshold: 0.1
+scopes:
+  global: {kind: all}
+  D1_metallic_boundary: {kind: metallic_boundary}
+  D2_yellow_tube: {kind: bbox_xyxy, bbox_xyxy: [1664, 0, 2048, 512]}
+  D3_gray_panel: {kind: bbox_xyxy, bbox_xyxy: [1024, 512, 1664, 1152]}
+output_dir: outputs/compression/scifihelmet/hybrid_interpolation_v1/c1/analysis

@@ -1,0 +1,9 @@
+schema_version: 2
+extends: configs/train/scifihelmet_hybrid_c1.yaml
+inputs:
+  phase0_summary: outputs/compression/scifihelmet/hybrid_factorization_v1/phase0/phase0_summary.json
+  initialization_report: outputs/compression/scifihelmet/hybrid_factorization_v1/phase0/initialization_report.json
+frozen_baseline_sha256:
+  baseline_latent: 5a1781afc1a877be452a87a3d958e48cab921b45237faebf2be3668a60ae5fdc
+  baseline_decoder: d676ade8294600eb0064a835eabfe86d4d35e39ee787d512574fbef8d7346baa
+output_root: outputs/compression/scifihelmet/hybrid_factorization_rerun_v1

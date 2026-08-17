@@ -1,0 +1,43 @@
+schema_version: 1
+experiment: scifihelmet_exact_basecolor_v1
+inputs:
+  gltf: assets/source/glTF-Sample-Assets/Models/SciFiHelmet/glTF/SciFiHelmet.gltf
+  core4_manifest: configs/assets/scifihelmet_core4.yaml
+  camera_contract: configs/train/scifihelmet_c4_dtf_camera31_v1.yaml
+output_root: outputs/scifihelmet_exact_basecolor_v1
+representation:
+  texture_resolution: [2048, 2048]
+  storage: linear_unorm8
+  address_mode: wrap
+  lod: 0
+  mipmaps: false
+lattice_search:
+  seed: 20260811
+  sample_count: 262144
+  min_states: 64
+  capacity_top_k: 64
+  material_top_k: 8
+  alternating_iterations: 5
+  render_camera_indices: [0, 9, 19, 23]
+training:
+  seed: 20260811
+  preflight_steps: 10
+  gate_steps: 1000
+  final_steps: 10000
+  texel_batch_size: 4096
+  screen_batch_size: 4096
+  log_interval: 100
+  checkpoints: [1000, 5000, 10000]
+evaluation:
+  intermediate_camera_indices: [0, 9, 19, 23]
+  final_full_camera_light_pool: true
+  strict_uv_probes_gate: 100000
+  strict_uv_probes_final: 1000000
+  bootstrap_samples: 10000
+  bootstrap_seed: 20260812
+scope:
+  train_only: true
+  formal_holdout_accessed: false
+  scow: false
+  unreal_engine: false
+  push: false

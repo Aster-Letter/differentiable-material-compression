@@ -1,0 +1,20 @@
+schema_version: 1
+experiment: scifihelmet_c4_affine_v1_l0_80k_continuation
+output_root: outputs/scifihelmet_c4_affine_v1/continuations/a874ad-l0-80k-r1
+source:
+  common_40k_config: configs/train/scifihelmet_c4_affine_v1_40k.yaml
+  common_40k_report: outputs/scifihelmet_c4_affine_v1/train40k/a874ad-r005/training_report.json
+  common_40k_report_sha256: 585aba65085e02f54def75848ae585456e4dfd06aa005c90078f2e7d9e087c01
+  checkpoint: outputs/scifihelmet_c4_affine_v1/train40k/a874ad-r005/checkpoints/L0/endpoints/step-040000/checkpoint.pt
+  checkpoint_hash: e3b71f0a5a05cb069e706f163481fa556c4259abf339fcfd8cba940750202965
+  parent_p0_hash: 22a57aac4f2b86108dddf32ee76c7dbd1487d58a4f37b741eb143f34278dd98e
+authorization:
+  authorized_l0_80k: true
+  candidate_id: L0
+  retain_p0_raw_gap_report: true
+training:
+  source_step: 40000
+  total_steps: 80000
+  checkpoint_steps: [45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000]
+  trend_interval: 1000
+  progress_interval: 250

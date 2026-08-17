@@ -1,0 +1,40 @@
+schema_version: 1
+experiment: scifihelmet_c4_affine_chroma8_l0_lightrel_40k_continuation
+output_root: outputs/scifihelmet_c4_affine_v1/train40k/a874ad-chroma8-l0-lightrel-40k-r1
+audit_output_root: outputs/scifihelmet_c4_affine_v1/lightrel_audit/a874ad-r2
+source:
+  preflight_config: configs/train/scifihelmet_c4_affine_v1_preflight.yaml
+  preflight_config_sha256: 01f3fe6f468173e8512819ed5dd4f18ddc11830a2762daa79303f1ef87897508
+  render_pool_config: configs/train/scifihelmet_c4_dtf_camera31_v1.yaml
+  render_pool_config_sha256: c330055a478534040dc7eb60a13e51ba9f5d1e4d5a3614378150b25f3315c712
+  pca_audit_report: outputs/scifihelmet_c4_affine_v1/pca_audit/a874ad-residual-r3/audit_report.json
+  pca_audit_report_sha256: 5c1e6e21e581a7daa2f051e9cae5140b9d80e70878e37216fddd604e765aa488
+  parent_manifest: outputs/scifihelmet_c4_affine_v1/pca_audit/a874ad-residual-r3/candidates/chroma8/manifest.json
+  parent_manifest_sha256: 95fa5e05b55fbb2f613e5c8080f4598339700465561aa01c73d21becfa096e3f
+  parent_p0_hash: d9e630cfd93be58b7e083744fea71f0fc77247f55db7d8fd1693c83d016cb748
+  source_step: 1000
+  source_training_config: configs/train/scifihelmet_c4_affine_chroma8_l0_lightrel_5k.yaml
+  source_training_config_sha256: f00338a0ab2d929c94c488ccedef572ebf8b4e15037de586121fe9cf8997f1f0
+  source_training_report: outputs/scifihelmet_c4_affine_v1/train5k/a874ad-chroma8-l0-lightrel-r1/training_report.json
+  source_training_report_sha256: dc045ef135379f98a61b24d46aa2ee8ae599dfe5076faf1d97102b9997330fee
+  source_checkpoint: outputs/scifihelmet_c4_affine_v1/train5k/a874ad-chroma8-l0-lightrel-r1/checkpoints/L0/endpoints/step-001000/checkpoint.pt
+  source_checkpoint_file_sha256: 83053ef6ea5006c7f68168f904aad10ee941c891181a98591636c9d0e969a1fd
+  source_checkpoint_hash: 6b348b601f8157069ccc955d88117874e0a7965e4744e31863061d677c68df35
+authorization:
+  authorized_lightrel_l0_40k: true
+  candidate_id: L0
+  retain_p0_raw_gap_report: true
+training:
+  total_steps: 40000
+  checkpoint_steps: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000]
+  trend_interval: 1000
+  progress_interval: 1000
+  preflight_warmup_steps: 5
+  preflight_measured_steps: 10
+camera_relative_lights:
+  - {name: key_right, local_position: [2.5, 3.0, 4.0], color: [1.0, 0.98, 0.95], radiant_intensity: 90.0, ambient_intensity: 0.04, role: camera_side}
+  - {name: key_left, local_position: [-2.5, 3.0, 4.0], color: [0.95, 0.98, 1.0], radiant_intensity: 90.0, ambient_intensity: 0.04, role: camera_side}
+  - {name: fill_right, local_position: [4.0, 0.5, 2.5], color: [1.0, 0.92, 0.88], radiant_intensity: 82.0, ambient_intensity: 0.04, role: camera_side}
+  - {name: fill_left, local_position: [-4.0, 0.5, 2.5], color: [0.88, 0.94, 1.0], radiant_intensity: 82.0, ambient_intensity: 0.04, role: camera_side}
+  - {name: top_fill, local_position: [0.0, 4.0, 3.0], color: [1.0, 0.96, 0.92], radiant_intensity: 80.0, ambient_intensity: 0.04, role: camera_side}
+  - {name: opposite_rim, local_position: [0.0, 3.0, -3.5], color: [0.92, 0.96, 1.0], radiant_intensity: 72.0, ambient_intensity: 0.04, role: rim}

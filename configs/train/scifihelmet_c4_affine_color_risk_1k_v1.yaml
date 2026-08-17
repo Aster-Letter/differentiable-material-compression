@@ -1,0 +1,38 @@
+schema_version: 1
+experiment: scifihelmet_c4_affine_color_risk_1k_v1
+output_root: outputs/scifihelmet_c4_affine_v1/color_risk/bf215f-tail-hue-r010-1k-r2
+source:
+  audit_config: configs/train/scifihelmet_c4_affine_color_guard_audit_v1.yaml
+  audit_config_sha256: b01f4657baf99be0a9fc61e1a4fa2ca95e9b0cf6dee845efb5264484c542e81a
+  audit_report: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-audit-r1/gradient_audit.json
+  audit_report_sha256: 1ca8029076d1779358fd76822269acb3f61e326c537eaf8a053d2d8af300cbda
+  audit_batches: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-audit-r1/audit_batches.pt
+  audit_batches_sha256: 93bd9362c69e5d10a10eca29ee45c21b83b0f211644d3e96680a6bf7ed9f55c3
+  metric_pairs: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-audit-r1/metric_pairs.pt
+  metric_pairs_sha256: f1b6666793a357ba69d68d7f286707b9f2e17abd685c86e74d9a0f66a662f7b7
+  old_training_config: configs/train/scifihelmet_c4_affine_color_guard_dual_ratio_1k_v1.yaml
+  old_training_config_sha256: c9c504b892fd2f407904b21b407666c522c5cec8b6596a101f45fc3aedda201d
+  old_training_report: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-dual-r010-r025-1k-r1/training_report.json
+  old_training_report_sha256: 661c614907f2790ce8cd0d98bb2015e55bdc8bf47c4c973ab8625d0602c2d94b
+  old_g0_checkpoint: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-dual-r010-r025-1k-r1/runs/C1-r010/checkpoints/C1/endpoints/step-001000/checkpoint.pt
+  old_g0_checkpoint_sha256: a08ae6bf065d6ad9e04f93cfa7afecf47705bbbb02979eaef9a43956984c2f4a
+  old_g0_curve: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-dual-r010-r025-1k-r1/runs/C1-r010/curve.jsonl
+  old_g0_curve_sha256: 235fb66f836e127c63cc3e43909a22f5f924217bc7defe08c5bf7cadd16ba483
+training:
+  total_ratio: 0.10
+  tail_mass: 0.25
+  preflight_steps: 10
+  total_steps: 1000
+  checkpoint_steps: [250, 500, 750, 1000]
+  metric_interval: 250
+  progress_interval: 100
+  trajectory_gradient_batches: 5
+  material_batch_size: 4096
+  color_batch_size: 4096
+  color_seed_offset: 23
+  charbonnier_epsilon: 0.001
+  hue_group_count: 8
+  hue_min_group_size: 4096
+render_outputs:
+  focus_camera_indices: [0, 8, 16, 24]
+  focus_light_index: 0

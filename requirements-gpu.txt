@@ -1,0 +1,6 @@
+# Install with:
+# python -m pip install torch==2.12.0 --index-url https://download.pytorch.org/whl/cu126
+# python -m pip install setuptools wheel ninja
+# python -m pip install -r requirements-gpu.txt --no-build-isolation
+
+nvdiffrast @ git+https://github.com/NVlabs/nvdiffrast.git@253ac4fcea7de5f396371124af597e6cc957bfae

@@ -1,0 +1,53 @@
+schema_version: 1
+experiment: complex_c4_asset_screen_v1
+formal_holdout_access: forbidden
+atlas_resolution: [2048, 2048]
+assets:
+  - id: BoomBox
+    gltf: assets/source/simple_nonmetal_khronos/BoomBox/glTF/BoomBox.gltf
+    gltf_sha256: b1d2e0e56864c71a4b65fc560bfc1572b1eb32cfb9c8e86d06e6f9ace2803a43
+    metadata: assets/source/simple_nonmetal_khronos/BoomBox/metadata.json
+    metadata_sha256: 764674e303f3bdbe63ebb1304039543d155348efb3c78e9891aedae2eddf0ad9
+    license_spdx: CC0-1.0
+    source_url: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/a02ccb86d94e546a58ebe9e3a825ae93ce509c6f/Models/BoomBox
+    emissive_identity_preserved: true
+    emissive_review:
+      texture: BoomBox_emissive.png
+      max_rgb_gt_0_05_fraction: 0.004467010498046875
+      mean_rgb: [0.00012985, 0.00312407, 0.00409435]
+      conclusion: sparse_accent_only
+  - id: Corset
+    gltf: assets/source/simple_nonmetal_khronos/Corset/glTF/Corset.gltf
+    gltf_sha256: 1aaa7fa54731ca833c3a0f919ba82c1af2a69cc7f8de36ba76bfb5038de8bd38
+    metadata: assets/source/simple_nonmetal_khronos/Corset/metadata.json
+    metadata_sha256: b8373a01d01a52136a0c0830dc0b32954a76b42abd0208bd588ed369e43eb172
+    license_spdx: CC0-1.0
+    source_url: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/2bac6f8c57bf471df0d2a1e8a8ec023c7801dddf/Models/Corset
+    emissive_identity_preserved: null
+  - id: WaterBottle
+    gltf: assets/source/simple_nonmetal_khronos/WaterBottle/glTF/WaterBottle.gltf
+    gltf_sha256: 0596f4e61dc781439d254fdfb5e3462daf1762c18715e3e3ac13001aa8f3f547
+    metadata: assets/source/simple_nonmetal_khronos/WaterBottle/metadata.json
+    metadata_sha256: f73f98b3c27cf83b114240430211b295a8b506aacbd7049999e621878c7352cf
+    license_spdx: CC0-1.0
+    source_url: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/2bac6f8c57bf471df0d2a1e8a8ec023c7801dddf/Models/WaterBottle
+    emissive_identity_preserved: true
+    emissive_review:
+      texture: WaterBottle_emissive.png
+      max_rgb_gt_0_05_fraction: 0.0003345012664794922
+      mean_rgb: [0.00005124, 0.00007355, 0.00007800]
+      conclusion: sparse_accent_only
+rig:
+  id: generic_c4_rig_v1
+  resolution: [256, 256]
+  vertical_fov_degrees: 38.0
+  distance_padding: 1.18
+  minimum_roughness: 0.045
+  display_exposure: 1.5
+  linear_psnr_data_range: 2.0
+  backface_culling: true
+capacity_gate:
+  q6_q4_material_improvement: 0.25
+  q6_q4_hdr_improvement: 0.10
+  q6_q4_display_ssim_delta: 0.01
+output_root: outputs/remote/c4-basecolor-priority/asset-screen

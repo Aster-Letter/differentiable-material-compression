@@ -1,0 +1,20 @@
+schema_version: 1
+experiment: scifihelmet_c4_affine_chroma8_l0_40k
+output_root: outputs/scifihelmet_c4_affine_v1/train40k/a874ad-chroma8-l0-r1
+source:
+  preflight_config: configs/train/scifihelmet_c4_affine_v1_preflight.yaml
+  preflight_config_sha256: 01f3fe6f468173e8512819ed5dd4f18ddc11830a2762daa79303f1ef87897508
+  pca_audit_report: outputs/scifihelmet_c4_affine_v1/pca_audit/a874ad-residual-r3/audit_report.json
+  pca_audit_report_sha256: 5c1e6e21e581a7daa2f051e9cae5140b9d80e70878e37216fddd604e765aa488
+  parent_manifest: outputs/scifihelmet_c4_affine_v1/pca_audit/a874ad-residual-r3/candidates/chroma8/manifest.json
+  parent_manifest_sha256: 95fa5e05b55fbb2f613e5c8080f4598339700465561aa01c73d21becfa096e3f
+  parent_p0_hash: d9e630cfd93be58b7e083744fea71f0fc77247f55db7d8fd1693c83d016cb748
+authorization:
+  authorized_chroma8_l0_40k: true
+  candidate_id: L0
+  retain_p0_raw_gap_report: true
+training:
+  total_steps: 40000
+  checkpoint_steps: [1000, 5000, 10000, 20000, 30000, 35000, 40000]
+  trend_interval: 1000
+  progress_interval: 250

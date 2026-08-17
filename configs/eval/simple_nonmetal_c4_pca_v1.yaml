@@ -1,0 +1,32 @@
+schema_version: 1
+experiment: simple_nonmetal_c4_pca_v1
+formal_holdout_access: forbidden
+atlas_resolution: [2048, 2048]
+margin: 0.001
+assets:
+  - id: ceramic_vase_01
+    stage: A0
+    gltf: assets/source/simple_nonmetal_polyhaven/CeramicVase01/ceramic_vase_01_2k.gltf
+    front_direction: [0.0, 0.0, 1.0]
+    upper_oblique_direction: [0.75, 0.48, 1.0]
+  - id: avocado
+    stage: A1
+    gltf: assets/source/simple_nonmetal_khronos/Avocado/glTF/Avocado.gltf
+    front_direction: [0.0, 0.0, 1.0]
+    upper_oblique_direction: [0.75, 0.48, 1.0]
+  - id: barramundi_fish
+    stage: A2
+    gltf: assets/source/simple_nonmetal_khronos/BarramundiFish/glTF/BarramundiFish.gltf
+    front_direction: [1.0, 0.0, 0.0]
+    upper_oblique_direction: [1.0, 0.48, 0.65]
+render:
+  resolution: [448, 448]
+  views: [front, upper_oblique]
+  vertical_fov_degrees: 38.0
+  distance_padding: 1.18
+  minimum_roughness: 0.045
+  display_exposure: 1.5
+  backface_culling: true
+  light_radiant_intensity_per_radius_squared: 24.0
+  ambient_intensity: 0.055
+output_root: outputs/simple_nonmetal_c4_pca/bf215f-r4-chroma8

@@ -1,0 +1,92 @@
+# Local secrets and machine configuration
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# Local/private collaboration state (never publish)
+/.private/
+/AGENTS.md
+/.agents/
+/docs-agent/
+/.scratch/
+
+# Obsidian machine state, project evidence keys, and central mounts
+**/.obsidian/
+/docs/obsidian/.local/
+/docs/obsidian-portfolio-demo/.local/
+/docs/obsidian-portfolio-demo/projects/
+/docs/obsidian/
+/docs/obsidian-portfolio-demo/
+/docs/PROJECT_PLAN.md
+/docs/CORE_CODE_REVIEW_*.md
+/docs/references/course-brief.md
+
+# Python / native builds
+__pycache__/
+*.py[cod]
+.pytest_cache/
+/pytest-cache-files-*/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+/build/
+/dist/
+/.cache/
+
+# Virtual environments and local toolchains
+/.venv/
+/.venv-tmp*/
+/venv/
+/env/
+
+# Downloaded dependencies and source assets
+/third_party/*
+!/third_party/README.md
+/assets/source/
+/assets/processed/
+/assets/training/
+/transfers/
+*.blend1
+*.blend2
+
+# Training and evaluation products
+/outputs/
+/checkpoints/
+/logs/
+/wandb/
+/tensorboard/
+/screenshots/
+/captures/
+
+# Local-only experiments that contain the sealed formal evaluation partition
+/configs/train/scifihelmet_decoder_ablation.yaml
+/configs/train/scifihelmet_render_quant.yaml
+/configs/eval/scifihelmet_repair.yaml
+/scripts/train_scifihelmet_decoder_ablation.py
+/scripts/train_scifihelmet_render_quant.py
+/tests/test_decoder_ablation.py
+/tests/test_obsidian_dashboard.py
+/tests/test_render_compression.py
+
+# Unreal Engine generated files (project may be nested below ue_demo/)
+/ue_demo/**/.vs/
+/ue_demo/**/Binaries/
+/ue_demo/**/Build/
+/ue_demo/**/DerivedDataCache/
+/ue_demo/**/Intermediate/
+/ue_demo/**/Saved/
+/ue_demo/**/Script/
+/ue_demo/**/Content/Developers/
+/ue_demo/**/Content/Imported/
+/ue_demo/**/*.uasset
+/ue_demo/**/*.umap
+/ue_demo/**/*.sln
+/ue_demo/**/*.VC.db
+/ue_demo/**/Config/DefaultEditorPerProjectUserSettings.ini
+
+# OS noise
+Thumbs.db
+Desktop.ini
+.DS_Store

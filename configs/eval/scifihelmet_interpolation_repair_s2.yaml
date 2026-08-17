@@ -1,0 +1,35 @@
+schema_version: 1
+inputs:
+  core4_dir: assets/processed/SciFiHelmet/core4
+  latent_hard_png: outputs/compression/scifihelmet/interpolation_repair_v1/s2/latent_s2_rgba_unorm8.png
+  decoder_npz: outputs/compression/scifihelmet/interpolation_repair_v1/s2/decoder_weights.npz
+frozen_sha256:
+  latent_hard_png: 8fcac44dc068a78f0365cef46ab677f60fba30c8ef864885cf8358e4b65601f6
+  decoder_npz: a64747248f00e00389f14d85e1f163b3fa805c9fede6732c1ece2a013b6c6f99
+analysis:
+  expected_atlas_hw: [2048, 2048]
+  decode_chunk_size: 262144
+  fixed_row_chunk_size: 128
+  fixed_phases_xy:
+    - [0.25, 0.25]
+    - [0.75, 0.25]
+    - [0.25, 0.75]
+    - [0.75, 0.75]
+  random_probe_count: 1048576
+  random_chunk_size: 262144
+  random_seed: 20260803
+  luminance_thresholds: [0.02, 0.05, 0.10]
+  dark_ratio: 0.5
+  metallic_boundary_threshold: 0.1
+scopes:
+  global:
+    kind: all
+  D1_metallic_boundary:
+    kind: metallic_boundary
+  D2_yellow_tube:
+    kind: bbox_xyxy
+    bbox_xyxy: [1664, 0, 2048, 512]
+  D3_gray_panel:
+    kind: bbox_xyxy
+    bbox_xyxy: [1024, 512, 1664, 1152]
+output_dir: outputs/compression/scifihelmet/interpolation_repair_v1/s2/analysis

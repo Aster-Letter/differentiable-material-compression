@@ -1,0 +1,45 @@
+schema_version: 1
+experiment: c4_render_ablation_lantern_40k_v1
+formal_holdout_access: forbidden
+asset: Lantern
+base_config:
+  path: configs/train/c4_render_ablation_20k_v1.yaml
+  sha256: b6bd5e66f67fe2ec34988e55b3eb86db276473e57f8be34823c9ab1c114d0cac
+source:
+  job_id: 37477
+  pair_root: outputs/remote/c4-render-ablation-20k-v1/37477/Lantern
+  preparation_sha256: 7f80c554747d4b6dd4114cdc3265daca208060a380c02d5c575d1bc8d89a5c77
+  paired_summary_sha256: 2da4bda2c815bf383dda37c3f3a39715def306dfacc28a8d0faa8c4795d4b678
+  arms:
+    material_only:
+      report_sha256: 42c8dd8d5c3f49d04631b6e2d9668486687c7f84b00c0fd8596bcaacca462701
+      checkpoint_sha256: 877ba35f1024586fe4a9bb4007f2b740d77d4e020663a389a4f7945686158bd8
+      progress_snapshot_sha256: 389934ce790cf86d90df96592fdd57ec2ffc8f175a0149d63d434f40140586bb
+    material_render:
+      report_sha256: bec5e7095bc10fbcecee5ce5a38fe700d53376b8fe2a4edc00974dfddc749d7f
+      checkpoint_sha256: 1f8c6baa16211a57a7be1dfcdc0cdf9a6f5606cfcdea6f96d2770a605a7bf215
+      progress_snapshot_sha256: bb96dde35b1aef9e848a9c4a1e31a956c6740fc0cfb67c7d794d73ffc53890d9
+training:
+  source_step: 20000
+  endpoint_step: 40000
+  continuation_observation_steps: [25000, 30000, 35000, 40000]
+  continuation_checkpoint_steps: [30000, 40000]
+  log_interval: 100
+  metric_interval: 500
+  material_batch_size: 8192
+  latent_learning_rate: 0.0002
+  affine_learning_rate: 0.00002
+loss:
+  base_color_l1: 1.0
+  render_linear: 1.0
+  render_log: 0.25
+  normal_cosine: 0.25
+  roughness_l1: 0.5
+  metallic_l1: 0.5
+postprocess:
+  scalar_saturate: true
+  normal_disk_projection: true
+  normal_z_reconstruction: true
+  straight_through_backward: true
+arms: [material_only, material_render]
+output_root: outputs/remote/c4-render-ablation-lantern-40k-v1

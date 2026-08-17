@@ -1,0 +1,45 @@
+schema_version: 1
+experiment: c4_render_ablation_lantern_render_160k_v1
+formal_holdout_access: forbidden
+asset: Lantern
+arm: material_render
+base_config:
+  path: configs/train/c4_render_ablation_20k_v1.yaml
+  sha256: b6bd5e66f67fe2ec34988e55b3eb86db276473e57f8be34823c9ab1c114d0cac
+source:
+  job_id: 37581
+  arm_root: outputs/remote/c4-render-ablation-lantern-40k-v1/37581/Lantern/material_render
+  preparation_path: outputs/remote/c4-render-ablation-lantern-40k-v1/37581/Lantern/preparation.json
+  preparation_sha256: 98215110030850bdf1a04e205f2957ba78473730adc3848fdd44c655fc8f5f09
+  formal_marker_path: outputs/remote/c4-render-ablation-lantern-40k-v1/37581/formal_verified.json
+  formal_marker_sha256: 74f16744452d3b51161673b240c07b22547cba87faefe1d9c74acdb471274e06
+  result_manifest_path: outputs/remote/c4-render-ablation-lantern-40k-v1/37581/result_manifest.json
+  result_manifest_sha256: 7c02420245e2e09ce95941715134784d003603b641a77801707a774fdbd0a244
+  report_sha256: 19d8e6d3bcdf83ec7c5c54816e15a072b470983ba3e6b53c5eb2bb42d5c622c7
+  checkpoint_sha256: d209250d7e7365818aee3bb6eaff127bb55d2a5d15a8c7c9df19eb9b36ffa431
+  progress_snapshot_sha256: d9c2a3b5384f3eaa776e6a87f805beea50599ac71609eb9563323fa36b080f10
+  prior_continuation_config_sha256: b43bcb1cba526e1eebe57d4497511b0dfb2589db514d8ad772de89491dadc535
+  source_20k_checkpoint_sha256: 1f8c6baa16211a57a7be1dfcdc0cdf9a6f5606cfcdea6f96d2770a605a7bf215
+training:
+  source_step: 40000
+  endpoint_step: 160000
+  continuation_observation_steps: [60000, 80000, 100000, 120000, 140000, 160000]
+  continuation_checkpoint_steps: [80000, 120000, 160000]
+  log_interval: 100
+  metric_interval: 500
+  material_batch_size: 8192
+  latent_learning_rate: 0.0002
+  affine_learning_rate: 0.00002
+loss:
+  base_color_l1: 1.0
+  render_linear: 1.0
+  render_log: 0.25
+  normal_cosine: 0.25
+  roughness_l1: 0.5
+  metallic_l1: 0.5
+postprocess:
+  scalar_saturate: true
+  normal_disk_projection: true
+  normal_z_reconstruction: true
+  straight_through_backward: true
+output_root: outputs/remote/c4-render-ablation-lantern-render-160k-v1

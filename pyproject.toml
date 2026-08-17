@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "differentiable-material-compression"
+version = "0.1.0"
+description = "Deployment-parity differentiable material compression for real-time PBR"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Aster-Letter"}]
+dependencies = [
+  "numpy>=2.4,<3",
+  "Pillow>=12,<13",
+  "PyYAML>=6,<7",
+  "scipy>=1.17,<2",
+  "scikit-image>=0.25,<1",
+  "trimesh>=4,<5",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=9,<10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = [
+  ".git",
+  ".private",
+  ".pytest-*",
+  "pytest-cache-files-*",
+  "assets",
+  "build",
+  "dist",
+  "docs-agent",
+  "outputs",
+  "third_party",
+  "ue_demo",
+]
+markers = [
+  "gpu: requires a CUDA-capable GPU",
+  "ue: requires Unreal Engine",
+  "asset: requires downloaded project assets",
+  "integration: exercises multiple project subsystems",
+]
+addopts = ["--strict-markers", "-p", "no:cacheprovider"]

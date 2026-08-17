@@ -1,0 +1,33 @@
+schema_version: 1
+inputs:
+  core4_dir: assets/processed/SciFiHelmet/core4
+  latent_hard_png: outputs/compression/scifihelmet/render_quant/baseline/models/tiny_mlp/latent_pre_qat_rgba_unorm8.png
+  decoder_npz: outputs/compression/scifihelmet/material_fit/tiny_mlp/decoder_weights.npz
+frozen_sha256:
+  latent_hard_png: 5a1781afc1a877be452a87a3d958e48cab921b45237faebf2be3668a60ae5fdc
+  decoder_npz: d676ade8294600eb0064a835eabfe86d4d35e39ee787d512574fbef8d7346baa
+anchors:
+  A_yellow_tube:
+    screenshot_name: 屏幕截图 2026-08-03 160712.png
+    screenshot_sha256: 7179287d6fd4adbfead1d6715cf19e89d42813dea0887e1757ca193032f339c0
+    screenshot_size: [993, 739]
+    atlas_roi_xyxy: [1664, 0, 2048, 512]
+  B_gray_panel:
+    screenshot_name: 屏幕截图 2026-08-03 163119.png
+    screenshot_sha256: 48aa88168062b805b214f380d8445ffb953df5399050739675dbc01a4036cbd4
+    screenshot_size: [1380, 637]
+    atlas_roi_xyxy: [1024, 512, 1664, 1152]
+analysis:
+  expected_atlas_hw: [2048, 2048]
+  decode_chunk_size: 262144
+  fixed_phases_xy: [[0.25, 0.25], [0.75, 0.25], [0.25, 0.75], [0.75, 0.75]]
+  seeded_probe_count_per_roi: 262144
+  random_seed: 20260803
+  luminance_threshold: 0.05
+  dark_ratio: 0.5
+  metallic_boundary_threshold: 0.1
+  luminance_boundary_threshold: 0.02
+  boundary_dilation_radius: 1
+  halo_threshold: 0.02
+  rectangularity_threshold: 0.65
+output_dir: outputs/compression/scifihelmet/filter_aware_decoder_v1/phase0

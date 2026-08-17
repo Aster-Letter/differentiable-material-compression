@@ -1,0 +1,28 @@
+schema_version: 1
+asset:
+  core4_dir: assets/processed/SciFiHelmet/core4
+  manifest: configs/assets/scifihelmet_core4.yaml
+training:
+  device: cuda
+  seed: 20260803
+  batch_size: 131072
+  log_interval: 500
+  checkpoint_interval: 10000
+  evaluation_chunk_size: 262144
+loss:
+  base_color_l1: 1.0
+  normal_cosine: 1.0
+  roughness_l1: 0.5
+  metallic_l1: 0.5
+models:
+- kind: linear
+  steps: 200000
+  max_minutes: 180
+  latent_learning_rate: 0.04
+  decoder_learning_rate: 0.002
+- kind: tiny_mlp
+  steps: 300000
+  max_minutes: 240
+  latent_learning_rate: 0.04
+  decoder_learning_rate: 0.002
+output_dir: outputs/compression/scifihelmet/material_fit

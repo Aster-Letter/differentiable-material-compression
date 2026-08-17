@@ -1,0 +1,75 @@
+schema_version: 1
+experiment: scifihelmet_c4_basecolor_priority_10k_v1
+formal_holdout_access: forbidden
+seed: 20260811
+source:
+  preflight_config: configs/train/scifihelmet_c4_affine_v1_preflight.yaml
+  preflight_config_sha256: 01f3fe6f468173e8512819ed5dd4f18ddc11830a2762daa79303f1ef87897508
+  render_pool_config: configs/train/scifihelmet_c4_dtf_camera31_v1.yaml
+  render_pool_config_sha256: c330055a478534040dc7eb60a13e51ba9f5d1e4d5a3614378150b25f3315c712
+  raw_parent_directory: assets/training/scifihelmet_p0_raw_parent_v1
+  raw_parent_manifest_sha256: 09be1816e3d878c5feb3bd4ec629a44a892566660041cd146c7c5d7361814173
+  raw_parent_artifact_hash: 07c59e9cc07a00f5b0d4740f1c64d46db56d5684dd0ea9513d1f9a94b2c97799
+training:
+  steps: 10000
+  checkpoint_steps: [1000, 5000, 10000]
+  log_interval: 100
+  metric_interval: 500
+  material_batch_size: 8192
+  latent_learning_rate: 0.0002
+  affine_learning_rate: 0.00002
+  compander_learning_rate: 0.0002
+loss:
+  render_linear: 1.0
+  render_log: 0.25
+  normal_cosine: 0.25
+  roughness_l1: 0.5
+  metallic_l1: 0.5
+  charbonnier_epsilon: 0.001
+postprocess:
+  scalar_saturate: true
+  normal_disk_projection: true
+  normal_z_reconstruction: true
+  straight_through_backward: true
+  compander_gain_min: 0.5
+  compander_gain_max: 2.0
+  analytic_instruction_budget: 80
+audit:
+  batches: 8
+  output_root: outputs/remote/c4-basecolor-priority/helmet-gradient-audit
+candidates:
+  N0-control:
+    objective_id: r0_control
+    target_share: 0.0
+    compander: false
+    output_root: outputs/remote/c4-basecolor-priority/helmet-n0-control
+  BC80:
+    objective_id: basecolor_priority
+    target_share: 0.8
+    compander: false
+    output_root: outputs/remote/c4-basecolor-priority/helmet-bc80
+  BC90:
+    objective_id: basecolor_priority
+    target_share: 0.9
+    compander: false
+    output_root: outputs/remote/c4-basecolor-priority/helmet-bc90
+  BC80-compander:
+    objective_id: basecolor_priority_compander
+    target_share: 0.8
+    compander: true
+    output_root: outputs/remote/c4-basecolor-priority/helmet-bc80-compander
+  BC90-compander:
+    objective_id: basecolor_priority_compander
+    target_share: 0.9
+    compander: true
+    output_root: outputs/remote/c4-basecolor-priority/helmet-bc90-compander
+audit_pairs:
+  - [0, 0]
+  - [9, 4]
+  - [20, 2]
+  - [30, 5]
+visual_views:
+  - {id: front, camera_index: 0, light_index: 0}
+  - {id: upper_side, camera_index: 9, light_index: 4}
+  - {id: rear_pipeline, camera_index: 20, light_index: 2, selection_metric: false}
+  - {id: top, yaw_degrees: 0.0, elevation_degrees: 78.0, selection_metric: false}

@@ -1,0 +1,63 @@
+schema_version: 1
+experiment: barramundi_c4_render_appearance_5k_v1
+formal_holdout_access: forbidden
+seed: 20260809
+asset:
+  id: barramundi_fish
+  gltf: assets/source/simple_nonmetal_khronos/BarramundiFish/glTF/BarramundiFish.gltf
+  atlas_resolution: [2048, 2048]
+training:
+  steps: 5000
+  checkpoint_interval: 1000
+  log_interval: 100
+  material_batch_size: 8192
+  render_resolution: [128, 128]
+  latent_learning_rate: 0.0002
+  affine_learning_rate: 0.00002
+  support_margin: 0.0001
+  support_penalty_weight: 10.0
+  tail_mass: 0.20
+  candidates:
+    - id: F1_appearance_balanced
+      tail_weight: 0.0
+    - id: F2_view_tail
+      tail_weight: 1.0
+loss:
+  base_color_l1: 1.0
+  normal_cosine: 1.0
+  roughness_l1: 1.0
+  metallic_l1: 0.5
+  render_charbonnier: 0.5
+  render_log1p: 0.10
+  render_opponent: 1.0
+  render_gradient: 0.5
+  charbonnier_epsilon: 0.001
+render:
+  vertical_fov_degrees: 38.0
+  distance_padding: 1.18
+  minimum_roughness: 0.045
+  ambient_intensity: 0.055
+  light_radiant_intensity_per_radius_squared: 24.0
+  display_resolution: [448, 448]
+  display_exposure: 1.5
+  train_camera_directions:
+    - [1.0, 0.0, 0.0]
+    - [-1.0, 0.0, 0.0]
+    - [0.85, 0.35, 0.45]
+    - [-0.85, 0.35, 0.45]
+    - [0.72, -0.22, -0.66]
+    - [-0.72, 0.22, -0.66]
+  train_light_offsets:
+    - [1.7, 2.1, 2.8]
+    - [-1.6, 1.45, 2.15]
+    - [2.0, 0.45, -2.2]
+    - [-2.0, 2.0, -1.0]
+  audit_camera_directions:
+    - [0.92, 0.18, -0.38]
+    - [-0.92, 0.18, -0.38]
+    - [0.62, 0.58, 0.22]
+  audit_light_offsets:
+    - [0.2, 2.5, 2.5]
+    - [2.4, 0.8, -1.4]
+    - [-2.3, 1.2, 0.8]
+output_root: outputs/simple_nonmetal_c4_affine_render/bf215f-fish-appearance-5k-r1

@@ -1,0 +1,33 @@
+schema_version: 1
+experiment: scifihelmet_c4_affine_color_guard_audit_v1
+output_root: outputs/scifihelmet_c4_affine_v1/color_guard/bf215f-audit-r1
+source:
+  preflight_config: configs/train/scifihelmet_c4_affine_v1_preflight.yaml
+  preflight_config_sha256: 01f3fe6f468173e8512819ed5dd4f18ddc11830a2762daa79303f1ef87897508
+  render_pool_config: configs/train/scifihelmet_c4_dtf_camera31_v1.yaml
+  render_pool_config_sha256: c330055a478534040dc7eb60a13e51ba9f5d1e4d5a3614378150b25f3315c712
+  pca_audit_report: outputs/scifihelmet_c4_affine_v1/pca_audit/a874ad-residual-r3/audit_report.json
+  pca_audit_report_sha256: 5c1e6e21e581a7daa2f051e9cae5140b9d80e70878e37216fddd604e765aa488
+  parent_manifest: outputs/scifihelmet_c4_affine_v1/pca_audit/a874ad-residual-r3/candidates/chroma8/manifest.json
+  parent_manifest_sha256: 95fa5e05b55fbb2f613e5c8080f4598339700465561aa01c73d21becfa096e3f
+  parent_p0_hash: d9e630cfd93be58b7e083744fea71f0fc77247f55db7d8fd1693c83d016cb748
+audit:
+  batch_count: 8
+  material_batch_size: 4096
+  color_batch_size: 4096
+  color_seed_offset: 23
+  metric_seed_offset: 29
+  pairs_per_bin_pair: 32
+  quantiles: [0.25, 0.50, 0.75]
+  charbonnier_epsilon: 0.001
+  gradient_epsilon: 1.0e-12
+  ratios: [0.10, 0.25, 0.50]
+  selected_ratio: null
+gate:
+  policy: balanced_color_protection
+  parent_chroma_retention_floor: 0.90
+  global_error_multiplier: 1.05
+  color_improvement_vs_c0: 0.05
+  color_regression_vs_c0: 0.02
+  display_ssim_absolute_drop: 0.005
+  yellow_selection_metric: false

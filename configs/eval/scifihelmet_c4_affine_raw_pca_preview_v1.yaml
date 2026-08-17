@@ -1,0 +1,24 @@
+schema_version: 1
+experiment: scifihelmet_c4_affine_raw_pca_preview_v1
+output_root: outputs/scifihelmet_c4_affine_v1/raw_pca_preview/bf215f-r1
+source:
+  preflight_config: configs/train/scifihelmet_c4_affine_v1_preflight.yaml
+  preflight_config_sha256: 01f3fe6f468173e8512819ed5dd4f18ddc11830a2762daa79303f1ef87897508
+  render_pool_config: configs/train/scifihelmet_c4_dtf_camera31_v1.yaml
+  render_pool_config_sha256: c330055a478534040dc7eb60a13e51ba9f5d1e4d5a3614378150b25f3315c712
+  standard_p0_manifest: outputs/scifihelmet_c4_affine_v1/preflight/a874ad-r2/p0-safe/manifest.json
+  standard_p0_manifest_sha256: 2d3f0a8001c398356a497e015f0df5985b8ca0c32e750ccdf8bcde5bb0ede796
+  chroma8_parent_manifest: outputs/scifihelmet_c4_affine_v1/pca_audit/a874ad-residual-r3/candidates/chroma8/manifest.json
+  chroma8_parent_manifest_sha256: 95fa5e05b55fbb2f613e5c8080f4598339700465561aa01c73d21becfa096e3f
+visual_contract:
+  resolution: [256, 256]
+  columns: [source, uniform_raw_pca, uniform_safe_pca, chroma8_safe]
+  views:
+    - {id: front, label: Front, camera_index: 0, light_index: 0, selection_metric: true}
+    - {id: top, label: Top view, yaw_degrees: 0.0, elevation_degrees: 78.0, radius: 4.5, target: [0.0, 0.0, 0.0], light_index: 2, selection_metric: false}
+    - {id: upper_side, label: Upper side, camera_index: 9, light_index: 4, selection_metric: true}
+    - {id: rear_yellow, label: Rear / yellow pipes, camera_index: 20, light_index: 2, selection_metric: false}
+scope:
+  formal_holdout_accessed: false
+  training_started: false
+  ue_started: false

@@ -1,0 +1,62 @@
+schema_version: 1
+inputs:
+  gltf: assets/source/glTF-Sample-Assets/Models/SciFiHelmet/glTF/SciFiHelmet.gltf
+  core4_manifest: configs/assets/scifihelmet_core4.yaml
+  core4_dir: assets/processed/SciFiHelmet/core4
+  latent_hard_png: outputs/compression/scifihelmet/render_quant/baseline/models/tiny_mlp/latent_pre_qat_rgba_unorm8.png
+  decoder_npz: outputs/compression/scifihelmet/material_fit/tiny_mlp/decoder_weights.npz
+  baseline_analysis: outputs/compression/scifihelmet/repair_v1/analysis/baseline_analysis.json
+render:
+  resolution: [256, 256]
+  camera_radius: 4.5
+  target: [0.0, 0.0, 0.0]
+  up: [0.0, 1.0, 0.0]
+  vertical_fov_degrees: 45.0
+  near: 0.1
+  far: 10.0
+  minimum_roughness: 0.045
+  display_exposure: 1.5
+  linear_psnr_data_range: 2.0
+training:
+  seed: 20260803
+  split_seed: 20260803
+  batch_size: 65536
+  latent_clamp_epsilon: 0.000001
+  latent_learning_rate: 0.0002
+  decoder_learning_rate: 0.00002
+  warmup_steps: 500
+  max_steps: 10000
+  max_minutes: 30
+  evaluation_interval: 250
+  log_interval: 25
+  decode_chunk_size: 262144
+  selection_render_case_limit: 3
+rois_xyxy:
+  D1_metallic_boundary_full: [0, 0, 2048, 2048]
+  D2_yellow_tube_uv: [1664, 0, 2048, 512]
+  D3_gray_panel_proxy: [1024, 512, 1664, 1152]
+train_cameras:
+  - {name: train_e0_y000, elevation_degrees: 0.0, yaw_degrees: 0.0}
+  - {name: train_e0_y045, elevation_degrees: 0.0, yaw_degrees: 45.0}
+  - {name: train_e0_y090, elevation_degrees: 0.0, yaw_degrees: 90.0}
+  - {name: train_e0_y135, elevation_degrees: 0.0, yaw_degrees: 135.0}
+  - {name: train_e0_y180, elevation_degrees: 0.0, yaw_degrees: 180.0}
+  - {name: train_e0_y225, elevation_degrees: 0.0, yaw_degrees: 225.0}
+  - {name: train_e0_y270, elevation_degrees: 0.0, yaw_degrees: 270.0}
+  - {name: train_e0_y315, elevation_degrees: 0.0, yaw_degrees: 315.0}
+  - {name: train_ep20_y000, elevation_degrees: 20.0, yaw_degrees: 0.0}
+  - {name: train_ep20_y090, elevation_degrees: 20.0, yaw_degrees: 90.0}
+  - {name: train_ep20_y180, elevation_degrees: 20.0, yaw_degrees: 180.0}
+  - {name: train_ep20_y270, elevation_degrees: 20.0, yaw_degrees: 270.0}
+  - {name: train_em15_y045, elevation_degrees: -15.0, yaw_degrees: 45.0}
+  - {name: train_em15_y135, elevation_degrees: -15.0, yaw_degrees: 135.0}
+  - {name: train_em15_y225, elevation_degrees: -15.0, yaw_degrees: 225.0}
+  - {name: train_em15_y315, elevation_degrees: -15.0, yaw_degrees: 315.0}
+  - {name: train_em30_y090, elevation_degrees: -30.0, yaw_degrees: 90.0}
+  - {name: train_em30_y270, elevation_degrees: -30.0, yaw_degrees: 270.0}
+  - {name: train_ep35_y225, elevation_degrees: 35.0, yaw_degrees: 225.0}
+train_lights:
+  - {name: front_right, position: [2.5, 3.0, 4.0], color: [1.0, 0.98, 0.95], radiant_intensity: 90.0, ambient_intensity: 0.04}
+  - {name: front_left, position: [-2.5, 3.0, 4.0], color: [0.95, 0.98, 1.0], radiant_intensity: 90.0, ambient_intensity: 0.04}
+  - {name: rear_top, position: [0.0, 4.0, -3.5], color: [1.0, 0.96, 0.92], radiant_intensity: 80.0, ambient_intensity: 0.04}
+output_dir: outputs/compression/scifihelmet/repair_v1

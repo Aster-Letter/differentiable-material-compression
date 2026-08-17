@@ -1,0 +1,20 @@
+schema_version: 1
+experiment: scifihelmet_c4_affine_v1_40k
+output_root: outputs/scifihelmet_c4_affine_v1/train40k/a874ad-r005
+source:
+  preflight_config: configs/train/scifihelmet_c4_affine_v1_preflight.yaml
+  preflight_report: outputs/scifihelmet_c4_affine_v1/preflight/a874ad-r2/preflight_report.json
+  preflight_report_sha256: 5c15389f43ac3616dcff1f3e8fb8a1d05717f6e0611a17f65c9b5de623e7cd45
+authorization:
+  authorized_40k: true
+  retain_p0_raw_gap_report: true
+  candidate_order: [L0, L1, L2]
+selection:
+  tv_ratio: 0.05
+  cube_ratio: 0.05
+training:
+  total_steps: 40000
+  checkpoint_steps: [1000, 5000, 10000, 20000, 30000, 35000, 40000]
+  trend_interval: 1000
+  progress_interval: 250
+  cube_sample_count: 1

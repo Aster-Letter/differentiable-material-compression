@@ -1,0 +1,57 @@
+schema_version: 1
+experiment: simple_nonmetal_c4_affine_render_1k_v1
+formal_holdout_access: forbidden
+seed: 20260809
+atlas_resolution: [2048, 2048]
+assets:
+  - id: ceramic_vase_01
+    stage: A0
+    gltf: assets/source/simple_nonmetal_polyhaven/CeramicVase01/ceramic_vase_01_2k.gltf
+    camera_directions:
+      - [0.0, 0.0, 1.0]
+      - [0.82, 0.0, 0.57]
+      - [-0.82, 0.0, 0.57]
+      - [0.70, 0.48, 0.82]
+  - id: avocado
+    stage: A1
+    gltf: assets/source/simple_nonmetal_khronos/Avocado/glTF/Avocado.gltf
+    camera_directions:
+      - [0.0, 0.0, 1.0]
+      - [0.82, 0.0, 0.57]
+      - [-0.82, 0.0, 0.57]
+      - [0.70, 0.48, 0.82]
+  - id: barramundi_fish
+    stage: A2
+    gltf: assets/source/simple_nonmetal_khronos/BarramundiFish/glTF/BarramundiFish.gltf
+    camera_directions:
+      - [1.0, 0.0, 0.0]
+      - [-1.0, 0.0, 0.0]
+      - [0.85, 0.35, 0.45]
+      - [-0.85, 0.35, 0.45]
+training:
+  steps: 1000
+  material_batch_size: 8192
+  latent_learning_rate: 0.001
+  affine_learning_rate: 0.0002
+  checkpoint_steps: [250, 500, 750, 1000]
+  report_interval: 100
+  render_resolution: [128, 128]
+  support_penalty_weight: 10.0
+  support_margin: 0.0001
+loss:
+  base_color_l1: 1.0
+  normal_cosine: 0.25
+  roughness_l1: 0.5
+  metallic_l1: 0.5
+  render_charbonnier: 1.0
+  render_log1p: 0.25
+  charbonnier_epsilon: 0.001
+render:
+  vertical_fov_degrees: 38.0
+  distance_padding: 1.18
+  minimum_roughness: 0.045
+  ambient_intensity: 0.055
+  light_radiant_intensity_per_radius_squared: 24.0
+  display_resolution: [448, 448]
+  display_exposure: 1.5
+output_root: outputs/simple_nonmetal_c4_affine_render/bf215f-r1-1k

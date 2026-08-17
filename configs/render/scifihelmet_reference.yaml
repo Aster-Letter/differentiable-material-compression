@@ -1,0 +1,81 @@
+schema_version: 1
+asset:
+  gltf: assets/source/glTF-Sample-Assets/Models/SciFiHelmet/glTF/SciFiHelmet.gltf
+  core4_manifest: configs/assets/scifihelmet_core4.yaml
+render:
+  coordinate_system: glTF_right_handed_y_up_front_plus_z
+  resolution:
+  - 512
+  - 512
+  views:
+  - name: front
+    eye:
+    - 0.0
+    - 0.0
+    - 4.5
+    target:
+    - 0.0
+    - 0.0
+    - 0.0
+    up:
+    - 0.0
+    - 1.0
+    - 0.0
+    vertical_fov_degrees: 45.0
+    near: 0.1
+    far: 10.0
+  - name: left_30
+    eye:
+    - -2.25
+    - 0.0
+    - 3.897114317
+    target:
+    - 0.0
+    - 0.0
+    - 0.0
+    up:
+    - 0.0
+    - 1.0
+    - 0.0
+    vertical_fov_degrees: 45.0
+    near: 0.1
+    far: 10.0
+  - name: right_30
+    eye:
+    - 2.25
+    - 0.0
+    - 3.897114317
+    target:
+    - 0.0
+    - 0.0
+    - 0.0
+    up:
+    - 0.0
+    - 1.0
+    - 0.0
+    vertical_fov_degrees: 45.0
+    near: 0.1
+    far: 10.0
+  tangent_basis: reconstructed_uv
+  normal_y_flip: false
+  backface_culling: true
+light:
+  type: point
+  position:
+  - 2.5
+  - 3.0
+  - 4.0
+  color:
+  - 1.0
+  - 0.98
+  - 0.95
+  radiant_intensity: 90.0
+  ambient_intensity: 0.04
+brdf:
+  model: cook_torrance_ggx
+  minimum_roughness: 0.045
+display:
+  exposure: 1.5
+  tone_mapping: reinhard
+  encoding: sRGB
+output_dir: outputs/reference/scifihelmet

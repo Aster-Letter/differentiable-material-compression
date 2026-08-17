@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "contract_id": "ue-bc-latent-feasibility-v1",
+  "frozen": true,
+  "task": "tsk:7b6e74",
+  "content_root": "/Game/CGCompression/BCLatentFeasibilityV1",
+  "evidence_root": "outputs/analysis/ue-bc-latent-feasibility-v1",
+  "formal_holdout_accessed": false,
+  "training_allowed": false,
+  "source_runtime_reference": {
+    "variant_id": "lantern_source_core4",
+    "current_resident_mib": 13.4375,
+    "source_evidence": "outputs/analysis/ue-runtime-evidence-v1/texture_residency.csv"
+  },
+  "texture_contract": {
+    "compression": "TC_BC7",
+    "expected_platform_format": "PF_BC7",
+    "srgb": false,
+    "mip_gen_settings": "TMGS_SIMPLE_AVERAGE",
+    "streaming_policy": "r.Streaming.FullyLoadUsedTextures=1"
+  },
+  "variants": [
+    {
+      "id": "lantern_raw_q4_bc7",
+      "source_variant_id": "lantern_raw_q4",
+      "source_texture": "/Game/CGCompression/C4RenderAblation20k/Textures/T_Lantern_RAW_Q4_Latent",
+      "source_texture_uasset_sha256": "2b7062b5f6b6b4e2d87be82506e1203ae853d10242e6530007f97398fa3bf80a",
+      "source_material": "/Game/CGCompression/C4RenderAblation20k/Materials/MI_Lantern_RAW_Q4",
+      "source_material_uasset_sha256": "952add009a4398174aa92df7692f492fed0cdfc006f36f1f97a762a353a08cad",
+      "source_map": "/Game/CGCompression/PerformanceEvidenceV1/Maps/Single/lantern_raw_q4",
+      "source_actor_label": "PerformanceEvidence_lantern_raw_q4",
+      "destination_texture": "/Game/CGCompression/BCLatentFeasibilityV1/Textures/T_Lantern_RAW_Q4_Latent_BC7",
+      "destination_material": "/Game/CGCompression/BCLatentFeasibilityV1/Materials/MI_Lantern_RAW_Q4_BC7",
+      "destination_map": "/Game/CGCompression/BCLatentFeasibilityV1/Maps/Single/lantern_raw_q4_bc7",
+      "destination_actor_label": "BCLatentEvidence_lantern_raw_q4_bc7"
+    },
+    {
+      "id": "lantern_material_render_20k_bc7",
+      "source_variant_id": "lantern_material_render_20k",
+      "source_texture": "/Game/CGCompression/C4RenderAblation20k/Textures/T_Lantern_MATERIAL_RENDER_Latent",
+      "source_texture_uasset_sha256": "2e0b6fd993b873dab44f9cf3ce638b0ee3ba9944e089eae1b88cae1ebf6eb4ea",
+      "source_material": "/Game/CGCompression/C4RenderAblation20k/Materials/MI_Lantern_MATERIAL_RENDER",
+      "source_material_uasset_sha256": "f208deb311e676cb2d3df3dd753aa6ec0832401486eb8dd741bced0a1297f188",
+      "source_map": "/Game/CGCompression/PerformanceEvidenceV1/Maps/Single/lantern_material_render_20k",
+      "source_actor_label": "PerformanceEvidence_lantern_material_render_20k",
+      "destination_texture": "/Game/CGCompression/BCLatentFeasibilityV1/Textures/T_Lantern_MATERIAL_RENDER_20K_Latent_BC7",
+      "destination_material": "/Game/CGCompression/BCLatentFeasibilityV1/Materials/MI_Lantern_MATERIAL_RENDER_20K_BC7",
+      "destination_map": "/Game/CGCompression/BCLatentFeasibilityV1/Maps/Single/lantern_material_render_20k_bc7",
+      "destination_actor_label": "BCLatentEvidence_lantern_material_render_20k_bc7"
+    },
+    {
+      "id": "lantern_material_render_160k_bc7",
+      "source_variant_id": "lantern_material_render_160k",
+      "source_texture": "/Game/CGCompression/C4LanternRender160k/Textures/T_Lantern_MATERIAL_RENDER_160K_Latent",
+      "source_texture_uasset_sha256": "80b0d6670eeee02cfe850eb76712690013551a41b30b65246422e0427565a1c2",
+      "source_material": "/Game/CGCompression/C4LanternRender160k/Materials/MI_Lantern_MATERIAL_RENDER_160K",
+      "source_material_uasset_sha256": "f8826cc03981cd774852b4789648d188cb5ccbe6201370bc3f9d1f8bb31748f5",
+      "source_map": "/Game/CGCompression/PerformanceEvidenceV1/Maps/Single/lantern_material_render_160k",
+      "source_actor_label": "PerformanceEvidence_lantern_material_render_160k",
+      "destination_texture": "/Game/CGCompression/BCLatentFeasibilityV1/Textures/T_Lantern_MATERIAL_RENDER_160K_Latent_BC7",
+      "destination_material": "/Game/CGCompression/BCLatentFeasibilityV1/Materials/MI_Lantern_MATERIAL_RENDER_160K_BC7",
+      "destination_map": "/Game/CGCompression/BCLatentFeasibilityV1/Maps/Single/lantern_material_render_160k_bc7",
+      "destination_actor_label": "BCLatentEvidence_lantern_material_render_160k_bc7"
+    }
+  ]
+}

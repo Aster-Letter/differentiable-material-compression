@@ -1,0 +1,13 @@
+schema_version: 1
+extends: configs/train/scifihelmet_hybrid_c1.yaml
+candidate: c2
+aux_channels: 3
+inputs:
+  initialization_texture_a: outputs/compression/scifihelmet/hybrid_interpolation_v1/phase0/c2/texture_a_base_rgb_aux0_rgba8.png
+  initialization_texture_b: outputs/compression/scifihelmet/hybrid_interpolation_v1/phase0/c2/texture_b_aux12_rg8.png
+  initialization_decoder: outputs/compression/scifihelmet/hybrid_interpolation_v1/phase0/c2/decoder_weights.npz
+frozen_sha256:
+  initialization_texture_a: 1716bf585f90660955465b4bdc256bf35e07ce36a3baff6fcf7c1637eb075757
+  initialization_texture_b: a24ad6eefb8639b77c7fdd0b140b3a48aed76a86b7733c5ade5f503aff106a56
+  initialization_decoder: 5421a5c42d84d7fefd21174bfe47013201705e05961dbd84398ce22615b0c840
+output_dir: outputs/compression/scifihelmet/hybrid_interpolation_v1/c2

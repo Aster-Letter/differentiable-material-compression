@@ -1,0 +1,17 @@
+name: cg-frontier
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - scipy
+  - pillow
+  - imageio
+  - pyyaml
+  - tqdm
+  - matplotlib
+  - scikit-image
+  - pytest
+  - pip:
+      - trimesh
